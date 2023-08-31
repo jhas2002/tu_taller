@@ -1,0 +1,100 @@
+CRITICAL - 2023-08-29 17:15:52 --> Undefined variable $messageReport
+in APPPATH\Views\usuario\loginView.php on line 21.
+ 1 APPPATH\Views\usuario\loginView.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $messageReport', 'APPPATH\\Views\\usuario\\loginView.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\loginView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuario/loginView', [], true)
+ 5 APPPATH\Controllers\Usuario.php(16): view('usuario/loginView')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->Login()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 18:57:54 --> Invalid file: cliente/registroView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cliente/registroView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/registroView', [], true)
+ 3 APPPATH\Controllers\Cliente.php(16): view('cliente/registroView')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:00:58 --> Undefined variable $departamentos
+in APPPATH\Views\cliente\registroView.php on line 131.
+ 1 APPPATH\Views\cliente\registroView.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $departamentos', 'APPPATH\\Views\\cliente\\registroView.php', 131)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cliente\\registroView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/registroView', [], true)
+ 5 APPPATH\Controllers\Cliente.php(16): view('cliente/registroView')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:01:41 --> Undefined variable $ocupaciones
+in APPPATH\Views\cliente\registroView.php on line 145.
+ 1 APPPATH\Views\cliente\registroView.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ocupaciones', 'APPPATH\\Views\\cliente\\registroView.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cliente\\registroView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/registroView', [], true)
+ 5 APPPATH\Controllers\Cliente.php(16): view('cliente/registroView')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:47:00 --> syntax error, unexpected variable "$nombres"
+in APPPATH\Controllers\Cliente.php on line 26.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cliente/registro')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cliente/registro')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cliente/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:47:07 --> Unclosed '{' on line 6
+in APPPATH\Controllers\Cliente.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cliente/registro')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cliente/registro')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cliente/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:47:25 --> Unclosed '{' on line 6
+in APPPATH\Controllers\Cliente.php on line 177.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cliente/registro')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cliente/registro')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cliente/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:56:46 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Cliente.php on line 48.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cliente/registro')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cliente/registro')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cliente/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:57:17 --> Class "App\Controllers\UsuarioModel" not found
+in APPPATH\Controllers\Cliente.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registrarModel()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:58:05 --> Class "App\Controllers\UsuarioModel" not found
+in APPPATH\Controllers\Cliente.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registrarModel()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 19:58:37 --> Class "App\Controllers\UsuarioModel" not found
+in APPPATH\Controllers\Cliente.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registrarModel()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-29 20:25:17 --> syntax error, unexpected token "*"
+in APPPATH\Controllers\Cliente.php on line 188.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cliente/registro')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cliente/registro')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cliente/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,68 @@
+.fondo{
+    background: #45B5C4; 
+    width: 100%;
+}
+/*BG INICIO*/
+.bg-modal-message{
+	background: #A0DED6;
+}
+
+.bg-modal-titulo{
+	background: #7ECECA;
+}
+/*BG FIN*/
+/*Login INICIO*/
+.bg-registro{
+	background: #CCCCCC;
+}
+/*LOGIN FIN*/
+
+/*Bordes INICIO*/
+.border-curvo{
+	border-radius: 1rem!important;
+}
+
+.border-curvo-top2{
+	border-top-left-radius: 1rem!important;
+	border-top-right-radius: 1rem!important;
+}
+/*Bordes FIN*/
+
+/*Botones INICIO*/
+.btn-bg{
+	background: linear-gradient(to right, #003E5F 0%, #107FC9 40%,#107FC9 50%,#107FC9 60%,#003E5F 100%)!important;
+	color: #fff!important;
+	font-size: 125%
+}
+.btn-bg:hover{
+	background: linear-gradient(to right, #107FC9 0%, #23B0DB 40%,#23B0DB 50%,#23B0DB 60%,#107FC9 100%)!important;
+	color: #fff!important;
+	font-size: 125%
+}
+.btn-bg-login{
+	background-color: #23B0DB!important;
+}
+.btn-bg-login:hover {
+    background-color: #003E5F!important;
+    color: #fff!important;
+}
+
+.drop:hover {
+	background-color: #23B0DB!important;
+}
+/*Botones FIN*/
+
+/*Modals INICIO*/
+
+.modal2{
+ background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all .5s;
+  align-items: center;
+}
+
+/*Modals FIN*/

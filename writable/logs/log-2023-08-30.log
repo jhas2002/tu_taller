@@ -1,0 +1,32 @@
+CRITICAL - 2023-08-30 14:11:14 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\usuario\loginView.php on line 84.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuario/loginView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(22): view('usuario/loginView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->Login()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 14:12:22 --> Class "App\Controllers\UserModel" not found
+in APPPATH\Controllers\Usuario.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->Activacion('7efe58429216e148deb246ca5d66ad18')
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 15:46:40 --> syntax error, unexpected token "else", expecting end of file
+in APPPATH\Views\master\header.php on line 53.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('master/header', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('master/header')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 20:23:02 --> Undefined variable $nombreUsuario
+in APPPATH\Models\UsuarioModel.php on line 62.
+ 1 APPPATH\Models\UsuarioModel.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuario', 'APPPATH\\Models\\UsuarioModel.php', 62)
+ 2 APPPATH\Controllers\Cliente.php(93): App\Models\UsuarioModel->InsertUsuario('1', '12345678', 'persiy_123@hotmail.com', 'd491ac2c346a3eb08465a41fb0bed794', '2')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->registrarModel()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+footer, footer * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    background-color: #003E5F;
+}
+
+li {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+footer div nav h1 {
+    color: white;
+    text-decoration: none;
+}
+
+.about {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 10%;
+}
+
+.logofooter{
+    cursor: pointer;
+    margin-right: auto;
+    width: 10%;
+}
+
+
+
+.date{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
