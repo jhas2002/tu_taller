@@ -1,0 +1,219 @@
+CRITICAL - 2023-09-05 15:57:09 --> Undefined variable $separa
+in APPPATH\Controllers\Taller.php on line 97.
+ 1 APPPATH\Controllers\Taller.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $separa', 'APPPATH\\Controllers\\Taller.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 15:59:38 --> Undefined array key 2
+in APPPATH\Controllers\Taller.php on line 97.
+ 1 APPPATH\Controllers\Taller.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Taller.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 16:00:11 --> Undefined array key 2
+in APPPATH\Controllers\Taller.php on line 97.
+ 1 APPPATH\Controllers\Taller.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'APPPATH\\Controllers\\Taller.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 16:00:17 --> Undefined array key 1
+in APPPATH\Controllers\Taller.php on line 97.
+ 1 APPPATH\Controllers\Taller.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Taller.php', 97)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 16:15:30 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Taller.php on line 139.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('taller/registrarmodel')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('taller/registrarmodel')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('taller/registrarmodel')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 16:21:50 --> syntax error, unexpected variable "$servicio"
+in APPPATH\Controllers\Taller.php on line 95.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('taller/registrarmodel')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('taller/registrarmodel')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('taller/registrarmodel')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 16:53:03 --> mysqli_sql_exception: Unknown column 'foto' in 'field list' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ta...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\TallerModel.php(51): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Taller.php(100): App\Models\TallerModel->InsertTaller('1', 'Juan', '123423', 'mi taller', 'sasddfgdfgd', NULL, NULL, 0)
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-05 16:53:03 --> Unknown column 'foto' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `foto`) VALUES (\'1\', \'Juan\', \'123423\', \'mi taller\', \'sasddfgdfgd\', NULL, NULL, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `foto`) VALUES (\'1\', \'Juan\', \'123423\', \'mi taller\', \'sasddfgdfgd\', NULL, NULL, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `foto`) VALUES (\'1\', \'Juan\', \'123423\', \'mi taller\', \'sasddfgdfgd\', NULL, NULL, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `foto`) VALUES (:idTaller:, :nombre:, :telefono:, :descripcion:, :direccion:, :latitud:, :longitud:, :foto:)', [...], false)
+ 5 APPPATH\Models\TallerModel.php(51): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Taller.php(100): App\Models\TallerModel->InsertTaller('1', 'Juan', '123423', 'mi taller', 'sasddfgdfgd', null, null, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-09-05 16:54:59 --> mysqli_sql_exception: Column 'latitud' cannot be null in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ta...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ta...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ta...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ta...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\TallerModel.php(51): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Taller.php(100): App\Models\TallerModel->InsertTaller('1', 'Juan', '123423', 'mi taller', 'sasddfgdfgd', NULL, NULL, 0)
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-05 16:54:59 --> Column 'latitud' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `fotoPerfil`) VALUES (\'1\', \'Juan\', \'123423\', \'mi taller\', \'sasddfgdfgd\', NULL, NULL, 0)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `fotoPerfil`) VALUES (\'1\', \'Juan\', \'123423\', \'mi taller\', \'sasddfgdfgd\', NULL, NULL, 0)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `fotoPerfil`) VALUES (\'1\', \'Juan\', \'123423\', \'mi taller\', \'sasddfgdfgd\', NULL, NULL, 0)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `taller` (`idTaller`, `nombre`, `telefono`, `descripcion`, `direccion`, `latitud`, `longitud`, `fotoPerfil`) VALUES (:idTaller:, :nombre:, :telefono:, :descripcion:, :direccion:, :latitud:, :longitud:, :fotoPerfil:)', [...], false)
+ 5 APPPATH\Models\TallerModel.php(51): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Taller.php(100): App\Models\TallerModel->InsertTaller('1', 'Juan', '123423', 'mi taller', 'sasddfgdfgd', null, null, 0)
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 17:18:39 --> syntax error, unexpected variable "$dias"
+in APPPATH\Controllers\Taller.php on line 115.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('taller/registro')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('taller/registro')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('taller/registro')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 17:19:42 --> Undefined variable $respuesta
+in APPPATH\Controllers\Taller.php on line 120.
+ 1 APPPATH\Controllers\Taller.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $respuesta', 'APPPATH\\Controllers\\Taller.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 17:23:20 --> Undefined variable $separar
+in APPPATH\Controllers\Taller.php on line 120.
+ 1 APPPATH\Controllers\Taller.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $separar', 'APPPATH\\Controllers\\Taller.php', 120)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registrarModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 17:55:20 --> Class "App\Controllers\tallerModel" not found
+in APPPATH\Controllers\Usuario.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->validacionLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 17:55:45 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 872.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Usuario.php(77): CodeIgniter\Model->__call('SelectById', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->validacionLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 17:57:00 --> Undefined property: stdClass::$foto
+in APPPATH\Controllers\Usuario.php on line 84.
+ 1 APPPATH\Controllers\Usuario.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$foto', 'APPPATH\\Controllers\\Usuario.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->validacionLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 19:38:53 --> Invalid file: usuarios/recuperarContraseniaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/recuperarContraseniaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/recuperarContraseniaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(139): view('usuarios/recuperarContraseniaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->recuperarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 19:40:40 --> Invalid file: usuarios/recuperarContraseniaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/recuperarContraseniaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/recuperarContraseniaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(139): view('usuarios/recuperarContraseniaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->recuperarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 19:40:43 --> Invalid file: usuarios/recuperarContraseniaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/recuperarContraseniaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/recuperarContraseniaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(139): view('usuarios/recuperarContraseniaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->recuperarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 19:41:04 --> Invalid file: usuarios/recuperarContraseniaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/recuperarContraseniaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/recuperarContraseniaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(139): view('usuarios/recuperarContraseniaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->recuperarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 19:41:06 --> Invalid file: usuarios/recuperarContraseniaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/recuperarContraseniaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/recuperarContraseniaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(139): view('usuarios/recuperarContraseniaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->recuperarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 19:41:29 --> Invalid file: usuarios/recuperarContraseñaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/recuperarContraseñaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/recuperarContraseñaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(139): view('usuarios/recuperarContraseñaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->recuperarContraseña()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 20:15:42 --> Invalid file: usuarios/cambiarContraseñaRecuperadaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuarios/cambiarContraseñaRecuperadaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('usuarios/cambiarContraseñaRecuperadaView', [], true)
+ 3 APPPATH\Controllers\Usuario.php(183): view('usuarios/cambiarContraseñaRecuperadaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Usuario->nuevaContraseña('dc29e9694ed9f1aec06627e496d94638')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 21:05:06 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 872.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Taller.php(167): CodeIgniter\Model->__call('SelectById', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-05 21:05:49 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 872.
+ 1 SYSTEMPATH\Model.php(586): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(763): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Taller.php(167): CodeIgniter\Model->__call('SelectById', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

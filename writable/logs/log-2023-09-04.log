@@ -1,0 +1,11 @@
+CRITICAL - 2023-09-04 20:53:34 --> Undefined variable $dias
+in APPPATH\Views\taller\registroView.php on line 157.
+ 1 APPPATH\Views\taller\registroView.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dias', 'APPPATH\\Views\\taller\\registroView.php', 157)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\registroView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/registroView', [], true)
+ 5 APPPATH\Controllers\Taller.php(28): view('taller/registroView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

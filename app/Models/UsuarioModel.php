@@ -101,4 +101,72 @@ class UsuarioModel extends Model
         $query = $builder->get();
         return $query;
     }
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia el valor de key
+     * 
+     * @param int $key
+     * @param string $email
+     */
+    public function UpdateKeyRecuperar($key,$email)
+    {
+        $builder = $this->db->table('usuario');
+        $builder->set('key', $key);
+        $builder->where('email', $email);
+        return $builder->update();
+    }
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia los datos de un usuario
+     * 
+     * @param int $idUsuario
+     * @param string $password
+     * @param date $fechaActualizacion
+     */
+    public function UpdatePasswordKey($key, $password, $fechaActualizacion)
+    {
+        $builder = $this->db->table('usuario');
+        $builder->set('password', md5($password));
+        $builder->set('key', 'usado');
+        $builder->set('fechaActualizacion', $fechaActualizacion);
+        $builder->where('key', $key);
+        return $builder->update();
+    }
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna un valor si el usuario y contraseña coninciden
+     */
+    public function VerificarPassword($idUsuario, $password)
+    {
+        $builder = $this->db->table('usuario');
+        $builder->select("email");
+        $builder->where("idUsuario", $idUsuario);
+        $builder->where("password", md5($password));
+        $query = $builder->get();
+        return $query->getResult();
+    }
+
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia los datos de un usuario
+     * 
+     * @param int $idUsuario
+     * @param string $password
+     */
+    public function UpdatePassword($idUsuario, $passwordNueva, $fechaActualizacion)
+    {
+        $builder = $this->db->table('usuario');
+        $builder->set('password', md5($passwordNueva));
+        $builder->set('fechaActualizacion', $fechaActualizacion);
+        $builder->where('idUsuario', $idUsuario);
+        return $builder->update();
+    }
 }

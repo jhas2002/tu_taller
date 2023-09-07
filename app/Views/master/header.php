@@ -18,6 +18,8 @@
 	<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcqVeUnAAAAAL1S6WxvROauup1dFBwmQmeZuFEw"></script>
 -->
 
+	<script src = "https://code.jquery.com/jquery-3.5.1.js"> </script>
+
 </head>
 <body>
 	<div>
@@ -35,7 +37,7 @@
 					<div class="nav-item dropdown">
 						<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
 						<div class="dropdown-menu fade-down bg-select">
-							<a href="<?php echo base_url('public/usuario/perfilusuario') ?>" class="dropdown-item">Perfil</a>
+							<a href="<?php echo base_url('public/cliente/perfilcliente') ?>" class="dropdown-item">Perfil</a>
 							<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
 						</div>
 					</div>
@@ -44,7 +46,13 @@
 				if ($session->get('rol') == '3') 
 				{
 			?>
-					<h1>Taller</h1>
+					<div class="nav-item dropdown">
+						<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
+						<div class="dropdown-menu fade-down bg-select">
+							<a href="<?php echo base_url('public/taller/perfiltaller') ?>" class="dropdown-item">Perfil</a>
+							<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
+						</div>
+					</div>
 			<?php
 				}
 			}
