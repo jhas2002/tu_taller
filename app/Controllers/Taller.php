@@ -119,7 +119,6 @@ class Taller extends BaseController
                 $diasBDD = $tallerModel->SelecIdDia($dias[0]);
                 if ($diasBDD != 0) 
                 {
-                    echo $diasBDD;
                     $tallerModel->InsertHorario($idUsuario, $diasBDD, $dias[1], $dias[3]);
                     
                 }
@@ -165,19 +164,125 @@ class Taller extends BaseController
         $data['id'] = $id;
         $tallerModel = new TallerModel();
         $dataTaller = $tallerModel->SelectById($id);
-        /*foreach ($dataTaller as $row) 
+        foreach ($dataTaller->getResult() as $row) 
         {
             $data['nombre'] = $row->nombre;
-            $data['primerApellido'] = $row->primerApellido;
-            $data['segundoApellido'] = $row->segundoApellido;
-            $data['email'] = $row->email;
             $data['telefono'] = $row->telefono;
-            $data['ocupacion'] = $row->ocupacion;
-            $data['departamento'] =$row->departamento;
-        }*/
+            $data['descripcion'] = $row->descripcion;
+            $data['direccion'] = $row->direccion;
+            $data['latitud'] = $row->latitud;
+            $data['longitud'] = $row->longitud;
+        }
+        $dataHorario = $tallerModel->SelecHorarioTaller($id);
+        $data['horario'] = $dataHorario->getResult();
         $data['messageReport'] = $messageReport;
+        $data['dias']= $tallerModel->SelectDia();
         echo view('master/header');
         echo view('taller/perfilTallerView',$data);
         echo view('master/footer');
+    }
+    public function editarTallerModel()
+    {
+        $session = session();
+        $idUsuario = $this->request->getPost('id');
+        $nombre = $this->request->getPost('txtNombre');
+        $telefono = $this->request->getPost('txtTelefono');
+        $descripcion = $this->request->getPost('txtDescripcion');
+        $direccion = $this->request->getPost('txtDireccion');
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $tallerModel = new TallerModel();
+        $tallerModel->UpdateTaller($idUsuario, $nombre, $telefono, $direccion, $descripcion,$fechaActualizacion);
+        $session->set('nombre', $nombre);
+        $url = base_url('public/taller/perfilTaller');
+        return redirect()->to($url)->with('messageReport','1');
+    }
+    public function agregarHorarioModal()
+    {
+        $idUsuario = $this->request->getPost('id');
+        $dia = $this->request->getPost('selecDia');
+        $horaInicio = $this->request->getPost('selecHoraInicio');
+        $horaFin = $this->request->getPost('selecHoraFin');
+
+        $tallerModel = new TallerModel();
+
+        $idDia = $tallerModel->SelecIdDia($dia);
+
+        $respuesta = $tallerModel->InsertHorario($idUsuario, $idDia, $horaInicio, $horaFin);
+
+        if ($respuesta > 0) 
+        {
+            $url = base_url('public/taller/perfilTaller');
+            return redirect()->to($url)->with('messageReport','5');
+        }
+        else
+        {
+            $url = base_url('public/taller/perfilTaller');
+            return redirect()->to($url)->with('messageReport','6');
+        }
+    }
+    public function deleteHorario()
+    {
+        $idUsuario = $this->request->getPost('id');
+        $dia = $this->request->getPost('txtDia');
+
+        $tallerModel = new TallerModel();
+
+        $idDia = $tallerModel->SelecIdDia($dia);
+
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $respuesta = $tallerModel->DeleteHorario($idUsuario, $idDia, $fechaActualizacion);
+
+        if ($respuesta > 0) 
+        {
+            $url = base_url('public/taller/perfilTaller');
+            return redirect()->to($url)->with('messageReport','7');
+        }
+        else
+        {
+            $url = base_url('public/taller/perfilTaller');
+            return redirect()->to($url)->with('messageReport','8');
+        }
+    }
+    public function editarHorario()
+    {
+        $idUsuario = $this->request->getPost('id');
+        $dia = $this->request->getPost('txtDia');
+        $horaInicio = $this->request->getPost('selecHoraInicio');
+        $horaFin = $this->request->getPost('selecHoraFin');
+
+        $tallerModel = new TallerModel();
+
+        $idDia = $tallerModel->SelecIdDia($dia);
+
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $respuesta = $tallerModel->UpdateHorario($idUsuario, $idDia, $horaInicio, $horaFin, $fechaActualizacion);
+
+        if ($respuesta > 0) 
+        {
+            $url = base_url('public/taller/perfilTaller');
+            return redirect()->to($url)->with('messageReport','9');
+        }
+        else
+        {
+            $url = base_url('public/taller/perfilTaller');
+            return redirect()->to($url)->with('messageReport','10');
+        }
+    }
+    public function cambiarFotoTaller()
+    {
+        $session = session();
+        $idUsuario = $session->get('id');
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+        if (move_uploaded_file($_FILES["imgUsuario"]["tmp_name"],$_SERVER["DOCUMENT_ROOT"].'/tu_taller/sources/images/usuario/'.$idUsuario.'.jpg')) 
+        {
+            $tallerModel = new TallerModel();
+            $tallerModel->UpdateTallerFoto($idUsuario,$fechaActualizacion);
+            $url = base_url('public/taller/perfilTaller');
+            $session->set('foto', '1');
+            return redirect()->to($url)->with('messageReport','4');
+        }
     }
 }

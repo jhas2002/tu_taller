@@ -112,4 +112,108 @@ class TallerModel extends Model
         return $query;
     }
 
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna el horario del taller
+     * 
+     * @param int $id
+     */
+    public function SelecHorarioTaller($id)
+    {
+        $builder = $this->db->table('horario H');
+        $builder->select("D.nombreDia AS 'dia', H.horaInicio AS 'HoraInicio', H.horaFin AS 'HoraFin'");
+        $builder->join("dia D", "H.idDia = D.idDia", "inner");
+        $builder->where('idTaller', $id);
+        $builder->where('estado', 1);
+        $query = $builder->get();
+        return $query;
+    }
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia el valor de la foto del usuario
+     * 
+     * @param int $idUsuario
+     * @param date $fechaActualizacion
+     */
+    public function UpdateTallerFoto($idUsuario,$fechaActualizacion)
+    {
+        $builder = $this->db->table('taller');
+        $builder->set('fotoPerfil', '1');
+        $builder->set('fechaActualizacion', $fechaActualizacion);
+        $builder->where('idTaller', $idUsuario);
+        return $builder->update();
+    }
+
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia los datos de un taller
+     * 
+     * @param int $idUsuario
+     * @param string $nombre
+     * @param string $telefono
+     * @param string $direccon
+     * @param string $descripcion
+     * @param date $fechaActualizacion
+     */
+    public function UpdateTaller($idUsuario, $nombre, $telefono, $direccion, $descripcion,$fechaActualizacion)
+    {
+        $builder = $this->db->table('taller');
+        $builder->set('nombre', $nombre);
+        $builder->set('telefono', $telefono);
+        $builder->set('direccion', $direccion);
+        $builder->set('descripcion', $descripcion);
+        $builder->set('fechaActualizacion', $fechaActualizacion);
+        $builder->where('idTaller', $idUsuario);
+        return $builder->update();
+    }
+
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia el valor del estado de un dia del horario inabilitandolo 
+     * 
+     * @param int $idUsuario
+     * @param int $idDia
+     * @param date $fechaActualizacion
+     */
+    public function DeleteHorario($idUsuario,$idDia,$fechaActualizacion)
+    {
+        $builder = $this->db->table('horario');
+        $builder->set('estado', '0');
+        $builder->set('fechaActualizacion', $fechaActualizacion);
+        $builder->where('idTaller', $idUsuario);
+        $builder->where('idDia', $idDia);
+        return $builder->update();
+    }
+
+    /**
+     * ---
+     * Update
+     * ---
+     * Update cambia la hora de inicio y fin de un horario 
+     * 
+     * @param int $idUsuario
+     * @param int $idDia
+     * @param string $horaInicio
+     * @param string $horaFin
+     * @param date $fechaActualizacion
+     */
+    public function UpdateHorario($idUsuario, $idDia, $horaInicio, $horaFin, $fechaActualizacion)
+    {
+        $builder = $this->db->table('horario');
+        $builder->set('horaInicio', $horaInicio);
+        $builder->set('horaFin', $horaFin);
+        $builder->set('fechaActualizacion', $fechaActualizacion);
+        $builder->where('idTaller', $idUsuario);
+        $builder->where('idDia', $idDia);
+        return $builder->update();
+    }
+
 }

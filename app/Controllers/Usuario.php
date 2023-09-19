@@ -202,17 +202,38 @@ class Usuario extends BaseController
         $password = $this->request->getPost('pswAntigua');
         $passwordNueva = $this->request->getPost('pswNueva');
         $usuarioModel = new UsuarioModel();
+        $session = session();
+        $rol = session('rol');
         if ($usuarioModel->VerificarPassword($idUsuario, $password)) 
         {
             $fechaActualizacion = date('Y-m-d h:i:s a', time());
             $usuarioModel->UpdatePassword($idUsuario, $passwordNueva, $fechaActualizacion);
-            $url = base_url('public/taller/perfilTaller');
-            return redirect()->to($url)->with('messageReport','3');
+            if ($rol == 3) 
+            {
+                $url = base_url('public/taller/perfilTaller');
+                return redirect()->to($url)->with('messageReport','3');
+            }
+            if ($rol == 2) 
+            {
+                $url = base_url('public/cliente/perfilCliente');
+                return redirect()->to($url)->with('messageReport','3');
+            }
+            
         }
         else
         {
-            $url = base_url('public/taller/perfilTaller');
-            return redirect()->to($url)->with('messageReport','2');
+            if ($rol == 3) 
+            {
+                $url = base_url('public/taller/perfilTaller');
+                return redirect()->to($url)->with('messageReport','2');
+            }
+            if ($rol == 2) 
+            {
+                $url = base_url('public/cliente/perfilCliente');
+                return redirect()->to($url)->with('messageReport','2');
+            }
+            
         }
     }
+    
 }

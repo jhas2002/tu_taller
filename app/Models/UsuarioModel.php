@@ -169,4 +169,5 @@ class UsuarioModel extends Model
         $builder->where('idUsuario', $idUsuario);
         return $builder->update();
     }
+    
 }

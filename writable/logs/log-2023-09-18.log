@@ -1,0 +1,102 @@
+CRITICAL - 2023-09-18 13:31:42 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(182): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 13:43:49 --> Undefined property: stdClass::$idDia
+in APPPATH\Views\taller\perfilTallerView.php on line 138.
+ 1 APPPATH\Views\taller\perfilTallerView.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idDia', 'APPPATH\\Views\\taller\\perfilTallerView.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(182): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 13:44:01 --> Undefined property: stdClass::$idDia
+in APPPATH\Views\taller\perfilTallerView.php on line 138.
+ 1 APPPATH\Views\taller\perfilTallerView.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idDia', 'APPPATH\\Views\\taller\\perfilTallerView.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(182): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 14:55:38 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 17:16:27 --> Undefined property: stdClass::$nombre
+in APPPATH\Controllers\Cliente.php on line 140.
+ 1 APPPATH\Controllers\Cliente.php(140): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'APPPATH\\Controllers\\Cliente.php', 140)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->perfilCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 17:16:49 --> Undefined variable $email
+in APPPATH\Views\cliente\perfilClienteView.php on line 37.
+ 1 APPPATH\Views\cliente\perfilClienteView.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Views\\cliente\\perfilClienteView.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cliente\\perfilClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/perfilClienteView', [], true)
+ 5 APPPATH\Controllers\Cliente.php(149): view('cliente/perfilClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->perfilCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 17:28:26 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 20:20:15 --> Undefined variable $nombre
+in APPPATH\Views\cliente\perfilClienteView.php on line 28.
+ 1 APPPATH\Views\cliente\perfilClienteView.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\cliente\\perfilClienteView.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cliente\\perfilClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/perfilClienteView', [], true)
+ 5 APPPATH\Controllers\Cliente.php(149): view('cliente/perfilClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->perfilCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 20:46:45 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-18 20:47:52 --> Undefined variable $session
+in APPPATH\Controllers\Cliente.php on line 178.
+ 1 APPPATH\Controllers\Cliente.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Cliente.php', 178)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->editarClienteModel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

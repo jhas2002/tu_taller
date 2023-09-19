@@ -126,4 +126,59 @@ class Cliente extends BaseController
             return redirect()->to($url)->with('messageReport','2');
         }        
     }
+    public function perfilCliente()
+    {
+        $session = session();
+        $messageReport = session('messageReport');
+        $id = $session->get('id');
+        $data['id'] = $id;
+        $clienteModel = new ClienteModel();
+        $dataCliente = $clienteModel->SelectById($id);
+
+        foreach ($dataCliente->getResult() as $row) 
+        {
+            $data['nombre'] = $row->nombres;
+            $data['primerApellido'] = $row->primerApellido;
+            $data['segundoApellido'] = $row->segundoApellido;
+            $data['celular'] = $row->celular;
+
+        }
+
+        $data['messageReport'] = $messageReport;
+        echo view('master/header');
+        echo view('cliente/perfilClienteView',$data);
+        echo view('master/footer');
+    }
+
+    public function cambiarFotoCliente()
+    {
+        $session = session();
+        $idUsuario = $session->get('id');
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+        if (move_uploaded_file($_FILES["imgUsuario"]["tmp_name"],$_SERVER["DOCUMENT_ROOT"].'/tu_taller/sources/images/usuario/'.$idUsuario.'.jpg')) 
+        {
+            $clienteModel = new ClienteModel();
+            $clienteModel->UpdateClienteFoto($idUsuario,$fechaActualizacion);
+            $url = base_url('public/cliente/perfilCliente');
+            $session->set('foto', '1');
+            return redirect()->to($url)->with('messageReport','4');
+        }
+    }
+    public function editarClienteModel()
+    {
+        $session = session();
+        $idUsuario = $this->request->getPost('id');
+        $nombre = $this->request->getPost('txtNombre');
+        $primerApellido = $this->request->getPost('txtPrimerApellido');
+        $segundoApellido = $this->request->getPost('txtSegundoApellido');
+        $telefono = $this->request->getPost('txtTelefono');
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $clienteModel = new ClienteModel();
+        $clienteModel->UpdateCliente($idUsuario, $nombre, $primerApellido, $segundoApellido, $telefono,$fechaActualizacion);
+        $nombreCompleto = $nombre.' '.$primerApellido.' '.$segundoApellido;
+        $session->set('nombre', $nombreCompleto);
+        $url = base_url('public/cliente/perfilCliente');
+        return redirect()->to($url)->with('messageReport','1');
+    }
 }

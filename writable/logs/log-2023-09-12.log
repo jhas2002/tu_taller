@@ -1,0 +1,72 @@
+CRITICAL - 2023-09-12 14:45:39 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 25.
+ 1 APPPATH\Views\taller\perfilTallerView.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(180): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 14:59:37 --> Undefined property: mysqli::$nombre
+in APPPATH\Controllers\Taller.php on line 170.
+ 1 APPPATH\Controllers\Taller.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nombre', 'APPPATH\\Controllers\\Taller.php', 170)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 15:00:12 --> Undefined property: mysqli::$nombre
+in APPPATH\Controllers\Taller.php on line 170.
+ 1 APPPATH\Controllers\Taller.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nombre', 'APPPATH\\Controllers\\Taller.php', 170)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 15:00:22 --> Undefined property: mysqli::$nombre
+in APPPATH\Controllers\Taller.php on line 170.
+ 1 APPPATH\Controllers\Taller.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nombre', 'APPPATH\\Controllers\\Taller.php', 170)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 15:02:43 --> Undefined variable $primerApellido
+in APPPATH\Views\taller\perfilTallerView.php on line 30.
+ 1 APPPATH\Views\taller\perfilTallerView.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $primerApellido', 'APPPATH\\Views\\taller\\perfilTallerView.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 15:04:53 --> syntax error, unexpected token ";"
+in APPPATH\Views\taller\perfilTallerView.php on line 41.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 3 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 16:14:00 --> Unclosed '{' on line 91
+in APPPATH\Views\taller\perfilTallerView.php on line 264.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 3 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-12 20:40:20 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

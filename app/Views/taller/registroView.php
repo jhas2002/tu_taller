@@ -158,7 +158,7 @@
 									
 									<label class="text-start">Selecciona un Día:</label>
 									<select name="selecDia" id="selecDia" class="form-select rounded-pill">
-										<option selected disabled value="">Seleccione un Servicio</option>
+										<option selected disabled value="">Seleccione un Día</option>
 										<?php
 										foreach($dias as $row){
 										?>

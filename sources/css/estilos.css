@@ -32,12 +32,10 @@
 .btn-bg{
 	background: linear-gradient(to right, #003E5F 0%, #107FC9 40%,#107FC9 50%,#107FC9 60%,#003E5F 100%)!important;
 	color: #fff!important;
-	font-size: 125%
 }
 .btn-bg:hover{
 	background: linear-gradient(to right, #107FC9 0%, #23B0DB 40%,#23B0DB 50%,#23B0DB 60%,#107FC9 100%)!important;
 	color: #fff!important;
-	font-size: 125%
 }
 .btn-bg-login{
 	background-color: #23B0DB!important;
