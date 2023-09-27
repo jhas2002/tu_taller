@@ -5,7 +5,7 @@
 			<div class="col-md-2">
 				<div class="row ">
 					<?php $session = session(); ?>
-					<img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/fotoUsuario.png');} ?>" class="rounded-circle">
+					<img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="rounded-circle">
 				</div>
 				<div class="row pt-3">
 					<button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-target="#cambiarFoto">CAMBIAR IMAGEN</button>
@@ -103,7 +103,7 @@
       	<form action="<?php echo base_url('public/cliente/cambiarfotocliente') ?>" enctype="multipart/form-data" novalidate target="_self" method="post">
       		<div class="form-group text-center" style="overflow: hidden;">
 				<label class="font-monserrat-bold">Foto perfil</label><br>
-				<img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/fotoUsuario.png');} ?>" class="rounded-circle img-thumbnail" id="imagen" ><br>
+				<img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="rounded-circle img-thumbnail" id="imagen" ><br>
 				<input type="file" accept="image/jpeg" class="font-monserrat-regular btn subirimagen" name="imgUsuario" id="file-upload">
 				<br>
 				<button type="submit" class="btn btn-bg rounded-pill font-monserrat-black" id="btnGuardarImagen" disabled>GUARDAR</button>

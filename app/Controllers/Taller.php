@@ -152,7 +152,7 @@ class Taller extends BaseController
         }
         else
         {
-            $url = base_url('public/cliente/registro');
+            $url = base_url('public/taller/registro');
             return redirect()->to($url)->with('messageReport','2');
         }      
     }
@@ -284,5 +284,111 @@ class Taller extends BaseController
             $session->set('foto', '1');
             return redirect()->to($url)->with('messageReport','4');
         }
+    }
+    public function listaServicio()
+    {
+        $session = session();
+        $idUsuario = $session->get('id');
+        $messageReport = session('messageReport');
+
+        $servicioTallerModel = new ServicioTallerModel();
+        $servicioModel = new ServicioModel();
+
+        $data['listaServicios']= $servicioModel->SelectServicio();
+        $data['servicios'] = $servicioTallerModel->SelectServiciosTaller($idUsuario);
+        $data['messageReport'] = $messageReport; 
+        $data['id'] = $idUsuario;
+        echo view('master/header');
+        echo view('servicio/listaServicioView', $data);
+        echo view('master/footer');
+    }
+
+    public function agregarServicioTallermodel()
+    {
+        $idUsuario = $this->request->getPost('id');
+        $servicio = $this->request->getPost('selecServicio');
+
+        $tallerModel = new TallerModel();
+        $servicioModel = new ServicioModel();
+        $servicioTallerModel = new ServicioTallerModel();
+
+        $idServicio = $servicioModel->SelecIdServicio($servicio);
+
+        if (!$servicioTallerModel->ServicioExists($idServicio, $idUsuario)) 
+        {
+            $respuesta = $servicioTallerModel->InsertServicioTaller($idServicio, $idUsuario);
+            if ($respuesta > 0) 
+            {
+                $url = base_url('public/taller/listaServicio');
+                return redirect()->to($url)->with('messageReport','1');
+            }
+            else
+            {
+                $url = base_url('public/taller/listaServicio');
+                return redirect()->to($url)->with('messageReport','2');
+            }
+        }
+        else
+        {
+            $url = base_url('public/taller/listaServicio');
+            return redirect()->to($url)->with('messageReport','3');
+        }
+
+        
+    }
+
+    public function deshabilitarServicioModel()
+    {
+        $idUsuario = $this->request->getPost('id');
+        $servicio = $this->request->getPost('txtServicioDeshabilitar');
+
+        $servicioTallerModel = new ServicioTallerModel();
+
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $respuesta = $servicioTallerModel->UpdateServicioTaller($idUsuario, $servicio, $fechaActualizacion, 0);
+
+        if ($respuesta > 0) 
+        {
+            $url = base_url('public/taller/listaServicio');
+            return redirect()->to($url)->with('messageReport','4');
+        }
+        else
+        {
+            $url = base_url('public/taller/listaServicio');
+            return redirect()->to($url)->with('messageReport','5');
+        }
+    }
+    public function habilitarServicioModel()
+    {
+        $idUsuario = $this->request->getPost('id');
+        $servicio = $this->request->getPost('txtServicioHabilitar');
+
+        $servicioTallerModel = new ServicioTallerModel();
+
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $respuesta = $servicioTallerModel->UpdateServicioTaller($idUsuario, $servicio, $fechaActualizacion, 1);
+
+        if ($respuesta > 0) 
+        {
+            $url = base_url('public/taller/listaServicio');
+            return redirect()->to($url)->with('messageReport','6');
+        }
+        else
+        {
+            $url = base_url('public/taller/listaServicio');
+            return redirect()->to($url)->with('messageReport','7');
+        }
+    }
+    public function listaTaller()
+    {
+        $tallerModel = new tallerModel();
+        $data['talleres'] = $tallerModel->SelectTalleres();
+        $messageReport = session('messageReport');
+        $data['messageReport'] = $messageReport;
+        echo view('master/header');
+        echo view('taller/listaTallerView', $data);
+        echo view('master/footer');
     }
 }

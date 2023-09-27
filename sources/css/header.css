@@ -26,12 +26,22 @@ header {
 .logo{
     cursor: pointer;
     margin-right: auto;
-    width: 25%;
+    width: 80px!important;
 }
 
-.logo img{
-    width: 25%;
+.bg-nav{
+    background-color: #107FC9;
 }
+.btn-head{
+    background: #fff!important;
+}
+.btn-head:hover,
+.btn-head.active{
+    background: #23B0DB!important;
+    color: #fff!important;
+    border: none;
+}
+
 .login {
     margin-left: 20px;
     padding: 9px 25px;

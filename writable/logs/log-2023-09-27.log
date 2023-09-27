@@ -1,0 +1,20 @@
+CRITICAL - 2023-09-27 09:47:54 --> Invalid file: cursos/listaTallerView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('cursos/listaTallerView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cursos/listaTallerView', [], true)
+ 3 APPPATH\Controllers\Taller.php(391): view('cursos/listaTallerView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-27 09:48:17 --> Undefined property: stdClass::$itc_idCurso
+in APPPATH\Views\taller\listaTallerView.php on line 22.
+ 1 APPPATH\Views\taller\listaTallerView.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$itc_idCurso', 'APPPATH\\Views\\taller\\listaTallerView.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\listaTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/listaTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(391): view('taller/listaTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

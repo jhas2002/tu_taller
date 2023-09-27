@@ -215,5 +215,20 @@ class TallerModel extends Model
         $builder->where('idDia', $idDia);
         return $builder->update();
     }
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna todos los datos de un taller
+     * 
+     * 
+     */
+    public function SelectTalleres()
+    {
+        $builder = $this->db->table('taller');
+        $builder->select("*");
+        $query = $builder->get();
+        return $query->getResult();
+    }
 
 }

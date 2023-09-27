@@ -2,6 +2,29 @@
     background: #45B5C4; 
     width: 100%;
 }
+.fondoAdmin
+{
+  background: #D4D2D2!important;
+}
+/*Fondo para lista talleres*/
+.fondo1{
+  /*margin-top: 50px;*/
+  background: url(../images/fondos/fondoTalleres.jpg);
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-repeat:no-repeat; /* No se repetira */
+  background-size:cover; /* Imagen al 100% del ancho */
+  background-attachment: fixed; /* Posicion fija para la imagen */
+}
+.fondo1 .cont{
+  background: rgba(0,0,0,.6)!important;
+  height: 100%;
+}
+.card-difu{
+  backdrop-filter: blur(10px)!important;
+  background-color: rgba(255,255,255,0.4)!important;
+}
 /*BG INICIO*/
 .bg-modal-message{
 	background: #A0DED6;

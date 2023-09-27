@@ -23,45 +23,96 @@
 </head>
 <body>
 	<div>
-		<header>
-			<a class="logo" href="<?php echo base_url('public/') ?>">
-				<img src="<?php echo base_url('sources/images/logo.png') ?>" alt="Tu Taller logo">
-			</a>
-			<?php
+		<?php
 			$session = session();
 			if ($session->has("rol")) 
 			{
 				if ($session->get('rol') == '2') 
 				{
 			?>
-					<div class="nav-item dropdown">
-						<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
-						<div class="dropdown-menu fade-down bg-select">
-							<a href="<?php echo base_url('public/cliente/perfilcliente') ?>" class="dropdown-item">Perfil</a>
-							<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
+					<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-nav" >
+						<a class="navbar-brand" href="<?php echo base_url('public/') ?>" width="auto">
+							<img src="<?php echo base_url('sources/images/logo.png') ?>" alt="Tu Taller logo" class="logo">
+						</a>
+						<button type="button" class="navbar-toggler mb-1 me-4  btn-light" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					    	<span class="navbar-toggler-icon btn-light"></span>
+					    </button>
+						<div class="collapse navbar-collapse" id="navbarCollapse">
+							<div class="navbar-nav ms-auto me-4">
+								<a href="<?php echo base_url('public/taller/listataller')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">TALLERES</button>
+				                </a>
+								<a href="<?php echo base_url('public/curso/listacursosadmin')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">COTIZAR</button>
+				                </a>
+				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">AGENDAR</button>
+				                </a>
+				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">SOLICITAR AYUDA</button>
+				                </a>
+				                <div class="nav-item dropdown">
+									<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
+									<div class="dropdown-menu fade-down bg-select">
+										<a href="<?php echo base_url('public/cliente/perfilcliente') ?>" class="dropdown-item">Perfil</a>
+										<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
+									</div>
+								</div>
+				            </div>
 						</div>
-					</div>
+					</nav>
+
 			<?php
 				}
 				if ($session->get('rol') == '3') 
 				{
 			?>
-					<div class="nav-item dropdown">
-						<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
-						<div class="dropdown-menu fade-down bg-select">
-							<a href="<?php echo base_url('public/taller/perfiltaller') ?>" class="dropdown-item">Perfil</a>
-							<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
+					
+
+					<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-nav" >
+						<a class="navbar-brand" href="<?php echo base_url('public/') ?>" width="auto">
+							<img src="<?php echo base_url('sources/images/logo.png') ?>" alt="Tu Taller logo" class="logo">
+						</a>
+						<button type="button" class="navbar-toggler mb-1 me-4  btn-light" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					    	<span class="navbar-toggler-icon btn-light"></span>
+					    </button>
+						<div class="collapse navbar-collapse" id="navbarCollapse">
+							<div class="navbar-nav ms-auto me-4">
+								<a href="<?php echo base_url('public/taller/listaservicio')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">SERVICIOS</button>
+				                </a>
+								<a href="<?php echo base_url('public/curso/listacursosadmin')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">COTIZACION</button>
+				                </a>
+				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">AGENDAR</button>
+				                </a>
+				                
+				                <div class="nav-item dropdown">
+									<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
+									<div class="dropdown-menu fade-down bg-select">
+										<a href="<?php echo base_url('public/taller/perfiltaller') ?>" class="dropdown-item">Perfil</a>
+										<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
+									</div> 
+								</div>
+				            </div>
 						</div>
-					</div>
+					</nav>
 			<?php
 				}
 			}
 			else {
 			?>
-				<a class="init" href="<?php echo base_url('public/usuario/login') ?>">
-					<button class="login">Iniciar sesión</button>
-				</a>
+				<nav class="navbar navbar-light sticky-top bg-nav">
+					<a class="navbar-brand" href="<?php echo base_url('public/') ?>" width="auto">
+							<img src="<?php echo base_url('sources/images/logo.png') ?>" alt="Tu Taller logo" class="logo">
+						</a>
+					<a class="init me-4" href="<?php echo base_url('public/usuario/login') ?>">
+						<button class="login">Iniciar sesión</button>
+					</a>
+				</nav>
+				
+				
 			<?php
 			} ?>
-		</header>
 	</div>

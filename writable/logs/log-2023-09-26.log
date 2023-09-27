@@ -1,0 +1,106 @@
+CRITICAL - 2023-09-26 08:55:16 --> Undefined variable $nombre
+in APPPATH\Views\cliente\perfilClienteView.php on line 28.
+ 1 APPPATH\Views\cliente\perfilClienteView.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\cliente\\perfilClienteView.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cliente\\perfilClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/perfilClienteView', [], true)
+ 5 APPPATH\Controllers\Cliente.php(149): view('cliente/perfilClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->perfilCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 14:24:09 --> Undefined variable $cursos
+in APPPATH\Views\servicio\listaServicioView.php on line 33.
+ 1 APPPATH\Views\servicio\listaServicioView.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cursos', 'APPPATH\\Views\\servicio\\listaServicioView.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(297): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 14:28:59 --> Undefined variable $cursos
+in APPPATH\Views\servicio\listaServicioView.php on line 33.
+ 1 APPPATH\Views\servicio\listaServicioView.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cursos', 'APPPATH\\Views\\servicio\\listaServicioView.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(297): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 14:31:42 --> Undefined variable $cursos
+in APPPATH\Views\servicio\listaServicioView.php on line 33.
+ 1 APPPATH\Views\servicio\listaServicioView.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cursos', 'APPPATH\\Views\\servicio\\listaServicioView.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(297): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 14:34:46 --> Undefined property: stdClass::$itc_idCurso
+in APPPATH\Views\servicio\listaServicioView.php on line 40.
+ 1 APPPATH\Views\servicio\listaServicioView.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$itc_idCurso', 'APPPATH\\Views\\servicio\\listaServicioView.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(297): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 14:35:21 --> Undefined property: stdClass::$itc_idCurso
+in APPPATH\Views\servicio\listaServicioView.php on line 57.
+ 1 APPPATH\Views\servicio\listaServicioView.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$itc_idCurso', 'APPPATH\\Views\\servicio\\listaServicioView.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(297): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 15:03:15 --> Undefined variable $id
+in APPPATH\Views\servicio\listaServicioView.php on line 78.
+ 1 APPPATH\Views\servicio\listaServicioView.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Views\\servicio\\listaServicioView.php', 78)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(302): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 15:04:05 --> Undefined variable $dias
+in APPPATH\Views\servicio\listaServicioView.php on line 84.
+ 1 APPPATH\Views\servicio\listaServicioView.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dias', 'APPPATH\\Views\\servicio\\listaServicioView.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(302): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 15:05:27 --> Undefined variable $dias
+in APPPATH\Views\servicio\listaServicioView.php on line 84.
+ 1 APPPATH\Views\servicio\listaServicioView.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dias', 'APPPATH\\Views\\servicio\\listaServicioView.php', 84)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\servicio\\listaServicioView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('servicio/listaServicioView', [], true)
+ 5 APPPATH\Controllers\Taller.php(302): view('servicio/listaServicioView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->listaServicio()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-26 15:19:06 --> Undefined variable $usuarioModel
+in APPPATH\Controllers\Taller.php on line 317.
+ 1 APPPATH\Controllers\Taller.php(317): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarioModel', 'APPPATH\\Controllers\\Taller.php', 317)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->agregarServicioTallermodel()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
