@@ -391,4 +391,28 @@ class Taller extends BaseController
         echo view('taller/listaTallerView', $data);
         echo view('master/footer');
     }
+    public function detalleTaller()
+    {
+        $idTaller = $this->request->getPost('taller');
+        $tallerModel = new TallerModel();
+        $servicioTallerModel = new ServicioTallerModel();
+        $dataTaller = $tallerModel->SelectById($idTaller);
+        foreach ($dataTaller->getResult() as $row) 
+        {
+            $data['nombre'] = $row->nombre;
+            $data['telefono'] = $row->telefono;
+            $data['descripcion'] = $row->descripcion;
+            $data['direccion'] = $row->direccion;
+            $data['latitud'] = $row->latitud;
+            $data['longitud'] = $row->longitud;
+            $data['foto'] = $row->fotoPerfil;
+            $data['idTaller'] = $idTaller;
+        }
+        $dataHorario = $tallerModel->SelecHorarioTaller($idTaller);
+        $data['horario'] = $dataHorario->getResult();
+        $data['servicios'] = $servicioTallerModel->SelectServiciosTaller($idTaller);
+        echo view('master/header');
+        echo view('taller/detalleTallerView', $data);
+        echo view('master/footer');
+    }
 }

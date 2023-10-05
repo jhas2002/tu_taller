@@ -29,13 +29,13 @@
 									?>
 									
 									<br>
-									<button class="btn btn-lg p-0 m-0 "><span class="bi bi-star-fill icon"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star-fill icon"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star-half icon"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star icon"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star icon"></span></button>
-									<form action="<?php echo base_url('public/curso/detallecurso') ?>" target="_self" method="get">
-										<input type="text" name="curso" hidden value="<?php echo $row->idTaller?>">
+									<button class="btn btn-lg p-0 m-0 "><span class="bi bi-star-fill icon icon-estrella"></span></button>
+									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star-fill icon icon-estrella"></span></button>
+									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star-half icon icon-estrella"></span></button>
+									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star icon icon-estrella"></span></button>
+									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star icon icon-estrella"></span></button>
+									<form action="<?php echo base_url('public/taller/detalletaller') ?>" target="_self" method="post">
+										<input type="text" name="taller" hidden value="<?php echo $row->idTaller?>">
 										<button type="submit" class="btn btn-bg rounded-pill font-monserrat-black">VER MÁS</button>
 									</form>
 								</div>
@@ -48,3 +48,56 @@
 		</div>
 	</div>
 </div>
+<?php
+if ($messageReport=='1') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-6">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">SOLICITUD EXITOSA</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Su cita ha sido enviada espere la confirmación en su correo electrónico</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/taller/listataller')?>"><img src="<?php echo base_url('sources/images/done.png') ?>" class="align-items-center text-center" alt="ok logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
+if ($messageReport=='2') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-6">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Hubo un error al solicitar su cita</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/taller/listataller')?>"><img src="<?php echo base_url('sources/images/fail.png') ?>" class="align-items-center text-center" alt="fail logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}

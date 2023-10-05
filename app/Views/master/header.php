@@ -84,7 +84,7 @@
 								<a href="<?php echo base_url('public/curso/listacursosadmin')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">COTIZACION</button>
 				                </a>
-				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
+				                <a href="<?php echo base_url('public/cita/listacitataller')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">AGENDAR</button>
 				                </a>
 				                

@@ -92,4 +92,23 @@ class ClienteModel extends Model
         $builder->where('idCliente', $idUsuario);
         return $builder->update();
     }
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna el email del cliente
+     * @return int
+     */
+    public function SelectEmailById($idCliente)
+    {
+        $builder = $this->db->table('usuario');
+        $builder->select("email");
+        $builder->where("idUsuario", $idCliente);
+        $query = $builder->get();
+        $res = 0;
+        foreach ($query->getResult() as $row) {
+            $res = $row->email;
+        }
+        return $res;
+    }
 }

@@ -1,0 +1,310 @@
+CRITICAL - 2023-10-04 10:31:26 --> Undefined variable $id
+in APPPATH\Views\taller\detalleTallerView.php on line 90.
+ 1 APPPATH\Views\taller\detalleTallerView.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Views\\taller\\detalleTallerView.php', 90)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\detalleTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/detalleTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(415): view('taller/detalleTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->detalleTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 18:18:37 --> date_default_timezone_set(): Timezone ID ' America/La_Paz' is invalid
+in SYSTEMPATH\CodeIgniter.php on line 184.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \' America/La_Paz\' is invalid', 'SYSTEMPATH\\CodeIgniter.php', 184)
+ 2 SYSTEMPATH\CodeIgniter.php(184): date_default_timezone_set(' America/La_Paz')
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-04 18:19:00 --> date_default_timezone_set(): Timezone ID ' America/La_Paz' is invalid
+in SYSTEMPATH\CodeIgniter.php on line 184.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \' America/La_Paz\' is invalid', 'SYSTEMPATH\\CodeIgniter.php', 184)
+ 2 SYSTEMPATH\CodeIgniter.php(184): date_default_timezone_set(' America/La_Paz')
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-04 12:23:00 --> Array to string conversion
+in APPPATH\Views\taller\detalleTallerView.php on line 104.
+ 1 APPPATH\Views\taller\detalleTallerView.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\taller\\detalleTallerView.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\detalleTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/detalleTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(415): view('taller/detalleTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->detalleTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 12:48:07 --> Array to string conversion
+in APPPATH\Views\taller\detalleTallerView.php on line 112.
+ 1 APPPATH\Views\taller\detalleTallerView.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\taller\\detalleTallerView.php', 112)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\detalleTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/detalleTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(415): view('taller/detalleTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->detalleTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 14:13:58 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 14:15:12 --> Undefined variable $nombre
+in APPPATH\Views\taller\perfilTallerView.php on line 44.
+ 1 APPPATH\Views\taller\perfilTallerView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\taller\\perfilTallerView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\taller\\perfilTallerView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('taller/perfilTallerView', [], true)
+ 5 APPPATH\Controllers\Taller.php(181): view('taller/perfilTallerView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->perfilTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:02:04 --> syntax error, unexpected variable "$builder"
+in APPPATH\Models\CitaModel.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\CitaModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CitaModel')
+ 3 APPPATH\Controllers\Cita.php(51): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CitaModel')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:02:32 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\xampp\htdocs\tu_taller\app\Models\CitaModel.php on line 49 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 593.
+ 1 APPPATH\Models\CitaModel.php(49): CodeIgniter\Database\BaseBuilder->join('cliente CL ON CL.idCliente = C.idCliente')
+ 2 APPPATH\Controllers\Cita.php(53): App\Models\CitaModel->SelectCitasTaller('5')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:02:37 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 1 passed in C:\xampp\htdocs\tu_taller\app\Models\CitaModel.php on line 49 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 593.
+ 1 APPPATH\Models\CitaModel.php(49): CodeIgniter\Database\BaseBuilder->join('cliente CL ON CL.idCliente = C.idCliente')
+ 2 APPPATH\Controllers\Cita.php(53): App\Models\CitaModel->SelectCitasTaller('5')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 17:03:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idClien' at line 3 in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descri...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descri...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descri...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descri...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\CitaModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Cita.php(53): App\Models\CitaModel->SelectCitasTaller('5')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-04 17:03:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idClien' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = :C.idTaller:', [...], false)
+ 5 APPPATH\Models\CitaModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cita.php(53): App\Models\CitaModel->SelectCitasTaller('5')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-04 17:04:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idClien' at line 3 in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descri...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descri...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descri...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descri...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\CitaModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Cita.php(53): App\Models\CitaModel->SelectCitasTaller('5')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-04 17:04:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idClien' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descripcion AS \'descripcionProblema\', C.fechaCita AS \'fechaCita\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\'
+FROM `cita` `C`
+JOIN `servicio S ON S`.`idServicio =` `C`.`idServicio` USING (`inner`)
+JOIN `cliente CL ON CL`.`idCliente =` `C`.`idCliente` USING (`inner`)
+WHERE `C`.`idTaller` = :C.idTaller:', [...], false)
+ 5 APPPATH\Models\CitaModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cita.php(53): App\Models\CitaModel->SelectCitasTaller('5')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:05:52 --> Undefined variable $servicios
+in APPPATH\Views\cita\listaCitasView.php on line 29.
+ 1 APPPATH\Views\cita\listaCitasView.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $servicios', 'APPPATH\\Views\\cita\\listaCitasView.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasView', [], true)
+ 5 APPPATH\Controllers\Cita.php(57): view('cita/listaCitasView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:08:57 --> Undefined property: stdClass::$descripcion
+in APPPATH\Views\cita\listaCitasView.php on line 34.
+ 1 APPPATH\Views\cita\listaCitasView.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$descripcion', 'APPPATH\\Views\\cita\\listaCitasView.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasView', [], true)
+ 5 APPPATH\Controllers\Cita.php(57): view('cita/listaCitasView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:12:35 --> Undefined variable $fechaCita
+in APPPATH\Views\cita\listaCitasView.php on line 37.
+ 1 APPPATH\Views\cita\listaCitasView.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $fechaCita', 'APPPATH\\Views\\cita\\listaCitasView.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasView', [], true)
+ 5 APPPATH\Controllers\Cita.php(57): view('cita/listaCitasView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:12:46 --> Undefined variable $listaServicios
+in APPPATH\Views\cita\listaCitasView.php on line 115.
+ 1 APPPATH\Views\cita\listaCitasView.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listaServicios', 'APPPATH\\Views\\cita\\listaCitasView.php', 115)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasView', [], true)
+ 5 APPPATH\Controllers\Cita.php(57): view('cita/listaCitasView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:17:56 --> syntax error, unexpected variable "$query"
+in APPPATH\Models\CitaModel.php on line 52.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\CitaModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CitaModel')
+ 3 APPPATH\Controllers\Cita.php(51): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CitaModel')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaTaller()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:46:27 --> Undefined property: stdClass::$dia
+in APPPATH\Views\cita\listaCitasPendientesView.php on line 36.
+ 1 APPPATH\Views\cita\listaCitasPendientesView.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$dia', 'APPPATH\\Views\\cita\\listaCitasPendientesView.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasPendientesView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasPendientesView', [], true)
+ 5 APPPATH\Controllers\Cita.php(72): view('cita/listaCitasPendientesView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaPendienteTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 17:46:43 --> Undefined property: stdClass::$HoraInicio
+in APPPATH\Views\cita\listaCitasPendientesView.php on line 36.
+ 1 APPPATH\Views\cita\listaCitasPendientesView.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$HoraInicio', 'APPPATH\\Views\\cita\\listaCitasPendientesView.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasPendientesView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasPendientesView', [], true)
+ 5 APPPATH\Controllers\Cita.php(72): view('cita/listaCitasPendientesView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaPendienteTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:21:40 --> Undefined variable $estado
+in APPPATH\Controllers\Cita.php on line 86.
+ 1 APPPATH\Controllers\Cita.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $estado', 'APPPATH\\Controllers\\Cita.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->aceptarCita()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:21:52 --> Undefined variable $email
+in APPPATH\Controllers\Cita.php on line 92.
+ 1 APPPATH\Controllers\Cita.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Controllers\\Cita.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->aceptarCita()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:23:33 --> Undefined variable $email
+in APPPATH\Controllers\Cita.php on line 92.
+ 1 APPPATH\Controllers\Cita.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $email', 'APPPATH\\Controllers\\Cita.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->aceptarCita()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:26:43 --> syntax error, unexpected variable "$respuesta"
+in APPPATH\Controllers\Cita.php on line 86.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cita/aceptarcita')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cita/aceptarcita')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cita/aceptarcita')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:27:05 --> Class "App\Controllers\ClienteModel" not found
+in APPPATH\Controllers\Cita.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->aceptarCita()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:27:20 --> syntax error, unexpected variable "$query"
+in APPPATH\Models\ClienteModel.php on line 107.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\ClienteModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ClienteModel')
+ 3 APPPATH\Controllers\Cita.php(83): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ClienteModel')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->aceptarCita()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:27:39 --> Undefined variable $idCliente
+in APPPATH\Controllers\Cita.php on line 86.
+ 1 APPPATH\Controllers\Cita.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idCliente', 'APPPATH\\Controllers\\Cita.php', 86)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->aceptarCita()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-04 21:41:39 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Cita.php on line 106.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('cita/listacitataller')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('cita/listacitataller')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('cita/listacitataller')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

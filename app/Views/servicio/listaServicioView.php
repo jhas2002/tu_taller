@@ -87,7 +87,7 @@
             <div class="modal-header">
                 <h5>¿ESTÁ SEGURO DE HABILITAR ESTE SERVICIO?</h5>
             </div>
-            <form id="deleteform" action="<?php echo base_url('public/taller/habilitarserviciomodel') ?>" method="POST" target="_self">
+            <form id="" action="<?php echo base_url('public/taller/habilitarserviciomodel') ?>" method="POST" target="_self">
                 <div class="modal-body d-flex justify-content-center">
                     <input type="hidden" id="txtServicioHabilitar" value="0" name="txtServicioHabilitar">
                     <input type="text" name="id" value="<?php echo $id?>" hidden>

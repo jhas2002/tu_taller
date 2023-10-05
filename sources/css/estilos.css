@@ -6,6 +6,12 @@
 {
   background: #D4D2D2!important;
 }
+/*ICON ESTRELLAS INICIO*/
+.icon-estrella{
+  color: #fff!important;
+  font-size: 25px;
+}
+/*ICON ESTRELLASFIN*/
 /*Fondo para lista talleres*/
 .fondo1{
   /*margin-top: 50px;*/
