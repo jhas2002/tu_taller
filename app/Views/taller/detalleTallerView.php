@@ -62,7 +62,7 @@
 						<br>
 						<br>
 						<h4 class="font-bebas sb-t-verde">SOLICITAR COTIZACIÓN</h4>
-						<button type="button" class="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#mdAgregarDia">Cotizar</button>
+						<button type="button" class="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#mdSolicitarCotizacion">Cotizar</button>
 						<br>
 						<br>
 						<h4 class="font-bebas sb-t-verde">SOLICITAR AYUDA</h4>
@@ -119,6 +119,44 @@
     </div>
   </div>
 </div>
+
+<!-- Modal Solicitar cotizacion-->
+<!-- Modal Solicitar Cita-->
+<div class="modal fade" id="mdSolicitarCotizacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="staticBackdropLabel">Solicitar Cotización</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="citaform" action="<?php echo base_url('public/cotizacion/solicitarcotizacion') ?>" target="_self" method="post">
+      	<div class="modal-body">
+	      	<input type="text" name="id" value="<?php echo $idTaller?>" hidden>
+	      	<div class="form-group">
+	      		<label>Seleccione el Servicio que quiere cotizar</label>
+	      		<select name="selecServicio" id="selecServicio" class="form-select rounded-pill">
+	      			<option selected disabled value="">Seleccione un Servicio</option>
+	      			<?php
+	      			foreach($servicios as $row){
+	      			?>
+	      			<option ><?php echo $row->descripcion; }?></option>
+					</select>
+	      	</div>
+	      	<div class="form-group">
+	      		<label>Describa su problema</label>
+	      		<textarea class="form-control form-control" name="txtDescripcionProblema" id="txtDescripcionProblema" placeholder="Descripcion" rows="5" ></textarea>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+	        <button type="submit" class="btn btn-success" id="btnGuardarPsw">Guardar</button>
+	      </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript">
 	function solicitarCita() 
 	{

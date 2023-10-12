@@ -101,3 +101,56 @@ if ($messageReport=='2') {
 	</div>
 <?php
 }
+if ($messageReport=='3') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-6">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">SOLICITUD DE COTIZACION EXITOSA</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Su solicitud para una cotización fue enviada correctamente se le enviara una respuesta al correo.</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/taller/listataller')?>"><img src="<?php echo base_url('sources/images/done.png') ?>" class="align-items-center text-center" alt="ok logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
+if ($messageReport=='4') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-6">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Hubo un error al solicitar su cotizacion</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/taller/listataller')?>"><img src="<?php echo base_url('sources/images/fail.png') ?>" class="align-items-center text-center" alt="fail logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
+?>

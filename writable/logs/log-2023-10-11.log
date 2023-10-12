@@ -1,0 +1,118 @@
+CRITICAL - 2023-10-11 10:36:52 --> Undefined variable $descripcion
+in APPPATH\Controllers\Cotizacion.php on line 32.
+ 1 APPPATH\Controllers\Cotizacion.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $descripcion', 'APPPATH\\Controllers\\Cotizacion.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->solicitarCotizacion()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-11 11:09:11 --> mysqli_sql_exception: Unknown column 'C.descripcionProblema' in 'field list' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descri...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descri...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descri...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descri...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\CotizacionModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Cotizacion.php(54): App\Models\CotizacionModel->SelectCotizacionTaller('5')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionTaller()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-11 11:09:11 --> Unknown column 'C.descripcionProblema' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descripcionProblema AS \'descripcionProblema\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.idCotizacion AS \'idCotizacion\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `C`.`idCliente`
+WHERE `C`.`idTaller` = \'5\'
+AND `C`.`estado` >0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descripcionProblema AS \'descripcionProblema\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.idCotizacion AS \'idCotizacion\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `C`.`idCliente`
+WHERE `C`.`idTaller` = \'5\'
+AND `C`.`estado` >0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descripcionProblema AS \'descripcionProblema\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.idCotizacion AS \'idCotizacion\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `C`.`idCliente`
+WHERE `C`.`idTaller` = \'5\'
+AND `C`.`estado` >0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descripcionProblema AS \'descripcionProblema\', C.estado AS \'estado\', S.descripcion AS \'servicio\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.idCotizacion AS \'idCotizacion\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `C`.`idCliente`
+WHERE `C`.`idTaller` = :C.idTaller:
+AND `C`.`estado` >0', [...], false)
+ 5 APPPATH\Models\CotizacionModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Cotizacion.php(54): App\Models\CotizacionModel->SelectCotizacionTaller('5')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionTaller()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 11:10:01 --> Undefined variable $citas
+in APPPATH\Views\cotizacion\listaCotizacionView.php on line 31.
+ 1 APPPATH\Views\cotizacion\listaCotizacionView.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $citas', 'APPPATH\\Views\\cotizacion\\listaCotizacionView.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cotizacion\\listaCotizacionView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionView', [], true)
+ 5 APPPATH\Controllers\Cotizacion.php(58): view('cotizacion/listaCotizacionView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 11:11:15 --> Undefined variable $citas
+in APPPATH\Views\cotizacion\listaCotizacionView.php on line 31.
+ 1 APPPATH\Views\cotizacion\listaCotizacionView.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $citas', 'APPPATH\\Views\\cotizacion\\listaCotizacionView.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cotizacion\\listaCotizacionView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionView', [], true)
+ 5 APPPATH\Controllers\Cotizacion.php(58): view('cotizacion/listaCotizacionView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 12:24:13 --> Undefined property: stdClass::$idCita
+in APPPATH\Views\cotizacion\listaCotizacionPendientesView.php on line 32.
+ 1 APPPATH\Views\cotizacion\listaCotizacionPendientesView.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idCita', 'APPPATH\\Views\\cotizacion\\listaCotizacionPendientesView.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cotizacion\\listaCotizacionPendientesView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionPendientesView', [], true)
+ 5 APPPATH\Controllers\Cotizacion.php(73): view('cotizacion/listaCotizacionPendientesView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionPendienteTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 16:45:15 --> Undefined property: stdClass::$cliente
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 28.
+ 1 APPPATH\Views\cotizacion\listaCotizacionClienteView.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cliente', 'APPPATH\\Views\\cotizacion\\listaCotizacionClienteView.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cotizacion\\listaCotizacionClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 5 APPPATH\Controllers\Cotizacion.php(126): view('cotizacion/listaCotizacionClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 16:45:30 --> Undefined property: stdClass::$Nombre
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 28.
+ 1 APPPATH\Views\cotizacion\listaCotizacionClienteView.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Nombre', 'APPPATH\\Views\\cotizacion\\listaCotizacionClienteView.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cotizacion\\listaCotizacionClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 5 APPPATH\Controllers\Cotizacion.php(126): view('cotizacion/listaCotizacionClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-11 16:45:37 --> Undefined property: stdClass::$descripcionProblema
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 29.
+ 1 APPPATH\Views\cotizacion\listaCotizacionClienteView.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$descripcionProblema', 'APPPATH\\Views\\cotizacion\\listaCotizacionClienteView.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cotizacion\\listaCotizacionClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 5 APPPATH\Controllers\Cotizacion.php(126): view('cotizacion/listaCotizacionClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
