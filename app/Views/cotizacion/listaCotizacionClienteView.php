@@ -30,8 +30,12 @@
 								<td><?php echo $row->servicio ?></td>
 								<td><?php echo $row->tiempoAproximado ?></td>
 								<td><?php echo $row->costo ?></td>
-								<td><button id="btnAceptar" class="btn btn-success rounded-pill" type="button" onclick="realizarCotizacion('<?php echo $row->idCotizacion; ?>')" data-bs-toggle="modal" data-bs-target="#mdRealizarCotizacion"> 	<span class="bi bi-check-square icon"></span>
-							    </button></td>
+								<td>
+									<form action="<?php echo base_url('public/cotizacion/clientecotizacionpdf') ?>" target="_blanck" method="post">
+										<input type="text" name="idCotizacion" value="<?php echo $row->idCotizacion ?>" hidden>
+										<button id="btnAceptar" class="btn btn-success rounded-pill" type="submit"> 	<span class="bi bi-check-square icon"></span>
+							    		</button>
+									</form></td>
 								
 								
 							</tr>

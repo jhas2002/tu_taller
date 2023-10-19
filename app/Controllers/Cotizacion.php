@@ -6,6 +6,8 @@ use App\Models\TallerModel;
 use App\Models\ServicioModel;
 use App\Models\ClienteModel;
 use App\Models\CotizacionModel;
+require_once $_SERVER["DOCUMENT_ROOT"].'/tu_taller/app/libraries/dompdf/autoload.inc.php';
+use Dompdf\Dompdf;
 
 class Cotizacion extends BaseController
 {
@@ -125,5 +127,67 @@ class Cotizacion extends BaseController
         echo view('master/header');
         echo view('cotizacion/listaCotizacionClienteView', $data);
         echo view('master/footer');
+    }
+    public function clienteCotizacionPDF()
+    {
+        $idCotizacion = $this->request->getPost('idCotizacion');
+
+        $idCliente = 0;
+        $idTaller = 0;
+        $cotizacionModel = new CotizacionModel();
+        $clienteModel = new ClienteModel();
+        $tallerModel = new TallerModel();
+
+        $dataCotizacion = $cotizacionModel->SelectCotizacionPDF($idCotizacion);
+
+        foreach ($dataCotizacion as $row) 
+        {
+            $data['solucion'] = $row->solucion;
+            $data['tiempo'] = $row->tiempo;
+            $data['costo'] = $row->costo;
+            $data['servicio'] = $row->servicio;
+
+            $fechas = str_split($row->fecha,10);
+            $data['fecha'] = $fechas[0];
+
+            $idCliente = $row->idCliente;
+            $idTaller = $row->idTaller;
+        }
+        $dataTaller = $tallerModel->SelectByIdPDF($idTaller);
+        foreach ($dataTaller->getResult() as $row) 
+        {
+            $data['nombreTaller'] = $row->nombreTaller;
+            $data['telefono'] = $row->telefono;
+            $data['direccion'] = $row->direccion;
+            $data['emailT'] = $row->email;
+        }
+        $dataCliente = $clienteModel->SelectByIdPDF($idCliente);
+        foreach ($dataCliente->getResult() as $row) 
+        {
+            $data['nombre'] = $row->nombre;
+            $data['celular'] = $row->celular;
+            $data['emailC'] = $row->email;
+        }
+        $html = view('cotizacion/clienteCotizacionPDF', $data);
+
+        $dompdf = new Dompdf();
+
+
+        $options = $dompdf->getOptions();
+        $options->set(array('isRemoteEnabled' => true));
+        $dompdf->setOptions($options);
+
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('8.5x11', 'landscape');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream('Cotizacion.pdf', ['Attachment' => 0]);
+        /**/
+
     }
 }

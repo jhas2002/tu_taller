@@ -1,0 +1,283 @@
+CRITICAL - 2023-10-18 15:15:47 --> The PHP GD extension is required, but is not installed.
+in APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\lib\Cpdf.php on line 5825.
+ 1 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Adapter\CPDF.php(846): Dompdf\Cpdf->addPngFromFile('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_5928.tmp', 146.52, 105.86502471406402, 93.75, 89.98631386861314)
+ 2 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer\Image.php(65): Dompdf\Adapter\CPDF->image('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_5928.tmp', 146.52, 416.14866141732284, 93.75, 89.98631386861314, 'normal')
+ 3 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(127): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Page.php(150): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(891): Dompdf\FrameReflower\Page->reflow(null)
+ 9 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(820): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+10 APPPATH\Controllers\Cotizacion.php(173): Dompdf\Dompdf->render()
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->clienteCotizacionPDF()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 15:15:53 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-18 17:08:15 --> Undefined property: stdClass::$emailT
+in APPPATH\Controllers\Cotizacion.php on line 162.
+ 1 APPPATH\Controllers\Cotizacion.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$emailT', 'APPPATH\\Controllers\\Cotizacion.php', 162)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->clienteCotizacionPDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 21:51:08 --> mysqli_sql_exception: Table 'db_taller.calificacion' doesn't exist in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `calific...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `calific...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `calific...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `calific...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\CalificarModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Calificar.php(25): App\Models\CAlificarModel->CalificacionExist('5', '6')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Calificar->registrarCalificacion()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calificar))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-18 21:51:08 --> Table 'db_taller.calificacion' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `calificacion`
+FROM `calificacion`
+WHERE `idTaller` = \'5\'
+AND `idCliente` = \'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `calificacion`
+FROM `calificacion`
+WHERE `idTaller` = \'5\'
+AND `idCliente` = \'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `calificacion`
+FROM `calificacion`
+WHERE `idTaller` = \'5\'
+AND `idCliente` = \'6\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `calificacion`
+FROM `calificacion`
+WHERE `idTaller` = :idTaller:
+AND `idCliente` = :idCliente:', [...], false)
+ 5 APPPATH\Models\CalificarModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Calificar.php(25): App\Models\CAlificarModel->CalificacionExist('5', '6')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Calificar->registrarCalificacion()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Calificar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 21:57:55 --> syntax error, unexpected token "*"
+in APPPATH\Controllers\Calificar.php on line 39.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('calificar/registrarcalificacion')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('calificar/registrarcalificacion')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('calificar/registrarcalificacion')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 23:21:28 --> mysqli_sql_exception: Table 'db_taller.itc_foro' doesn't exist in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.itc_pr...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.itc_pr...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.itc_pr...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.itc_pr...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-18 23:21:28 --> Table 'db_taller.itc_foro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.itc_pregunta AS \'pregunta\', F.itc_idForo AS \'idForo\', C.itc_nombre AS \'categoria\', U.itc_foto AS \'foto\', U.itc_nombres AS \'nombre\', F.itc_idEstudiante AS \'idEstudiante\', (SELECT COUNT(CM.itc_idForo) FROM itc_comentario CM WHERE CM.itc_idForo = F.itc_idForo) AS \'respuestas\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_categoria` `C` ON `C`.`itc_idCategoria` = `F`.`itc_idCategoria`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.itc_pregunta AS \'pregunta\', F.itc_idForo AS \'idForo\', C.itc_nombre AS \'categoria\', U.itc_foto AS \'foto\', U.itc_nombres AS \'nombre\', F.itc_idEstudiante AS \'idEstudiante\', (SELECT COUNT(CM.itc_idForo) FROM itc_comentario CM WHERE CM.itc_idForo = F.itc_idForo) AS \'respuestas\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_categoria` `C` ON `C`.`itc_idCategoria` = `F`.`itc_idCategoria`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.itc_pregunta AS \'pregunta\', F.itc_idForo AS \'idForo\', C.itc_nombre AS \'categoria\', U.itc_foto AS \'foto\', U.itc_nombres AS \'nombre\', F.itc_idEstudiante AS \'idEstudiante\', (SELECT COUNT(CM.itc_idForo) FROM itc_comentario CM WHERE CM.itc_idForo = F.itc_idForo) AS \'respuestas\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_categoria` `C` ON `C`.`itc_idCategoria` = `F`.`itc_idCategoria`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.itc_pregunta AS \'pregunta\', F.itc_idForo AS \'idForo\', C.itc_nombre AS \'categoria\', U.itc_foto AS \'foto\', U.itc_nombres AS \'nombre\', F.itc_idEstudiante AS \'idEstudiante\', (SELECT COUNT(CM.itc_idForo) FROM itc_comentario CM WHERE CM.itc_idForo = F.itc_idForo) AS \'respuestas\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_categoria` `C` ON `C`.`itc_idCategoria` = `F`.`itc_idCategoria`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`', [], false)
+ 5 APPPATH\Models\ForoModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 23:24:54 --> mysqli_sql_exception: Table 'db_taller.icomentario' doesn't exist in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.pregun...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.pregun...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.pregun...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.pregun...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-18 23:24:54 --> Table 'db_taller.icomentario' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM icomentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM icomentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM icomentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM icomentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`', [], false)
+ 5 APPPATH\Models\ForoModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 23:25:16 --> mysqli_sql_exception: Unknown column 'F.idCliente' in 'field list' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.pregun...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.pregun...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.pregun...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.pregun...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-18 23:25:16 --> Unknown column 'F.idCliente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `F`.`idCliente`', [], false)
+ 5 APPPATH\Models\ForoModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 23:26:32 --> mysqli_sql_exception: Unknown column 'F.idCliente' in 'field list' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.pregun...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.pregun...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.pregun...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.pregun...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-18 23:26:32 --> Unknown column 'F.idCliente' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `F`.`idUsuario`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `F`.`idUsuario`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `F`.`idUsuario`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.pregunta AS \'pregunta\', F.idForo AS \'idForo\', C.foto AS \'foto\', CONCAT(C.nombres, \' \', `C`.`primerApellido`, \' \', C.segundoApellido) AS \'nombre\', F.idCliente AS \'idCliente\', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS \'respuestas\'
+FROM `foro` `F`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `F`.`idUsuario`
+INNER JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`', [], false)
+ 5 APPPATH\Models\ForoModel.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(24): App\Models\ForoModel->SelectPreguntasForo()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->listaForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 23:36:25 --> Invalid file: foro/registrarPreguntaView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('foro/registrarPreguntaView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('foro/registrarPreguntaView', [], true)
+ 3 APPPATH\Controllers\Foro.php(79): view('foro/registrarPreguntaView')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->realizarPregunta()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 23:37:20 --> Undefined variable $categorias
+in APPPATH\Views\foro\registrarPreguntaView.php on line 28.
+ 1 APPPATH\Views\foro\registrarPreguntaView.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\foro\\registrarPreguntaView.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\foro\\registrarPreguntaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('foro/registrarPreguntaView', [], true)
+ 5 APPPATH\Controllers\Foro.php(79): view('foro/registrarPreguntaView')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->realizarPregunta()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-18 23:43:52 --> Undefined variable $idEstudiante
+in APPPATH\Controllers\Foro.php on line 84.
+ 1 APPPATH\Controllers\Foro.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idEstudiante', 'APPPATH\\Controllers\\Foro.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->registrarPregunta()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 23:44:48 --> mysqli_sql_exception: Table 'db_taller.itc_foro' doesn't exist in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.itc_pr...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.itc_pr...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.itc_pr...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.itc_pr...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(78): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(43): App\Models\ForoModel->SelectPreguntaForo('1')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-10-18 23:44:48 --> Table 'db_taller.itc_foro' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT F.itc_pregunta AS \'pregunta\', U.itc_nombres AS \'nombre\', U.itc_primerApellido AS \'primerApellido\', U.itc_segundoApellido AS \'segundoApellido\', U.itc_foto AS \'foto\', U.itc_idUsuario AS \'idUsuario\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`
+WHERE `F`.`itc_idForo` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT F.itc_pregunta AS \'pregunta\', U.itc_nombres AS \'nombre\', U.itc_primerApellido AS \'primerApellido\', U.itc_segundoApellido AS \'segundoApellido\', U.itc_foto AS \'foto\', U.itc_idUsuario AS \'idUsuario\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`
+WHERE `F`.`itc_idForo` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT F.itc_pregunta AS \'pregunta\', U.itc_nombres AS \'nombre\', U.itc_primerApellido AS \'primerApellido\', U.itc_segundoApellido AS \'segundoApellido\', U.itc_foto AS \'foto\', U.itc_idUsuario AS \'idUsuario\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`
+WHERE `F`.`itc_idForo` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT F.itc_pregunta AS \'pregunta\', U.itc_nombres AS \'nombre\', U.itc_primerApellido AS \'primerApellido\', U.itc_segundoApellido AS \'segundoApellido\', U.itc_foto AS \'foto\', U.itc_idUsuario AS \'idUsuario\'
+FROM `itc_foro` `F`
+INNER JOIN `itc_estudiante` `E` ON `E`.`itc_idEstudiante` = `F`.`itc_idEstudiante`
+INNER JOIN `itc_usuario` `U` ON `U`.`itc_idUsuario` = `E`.`itc_idEstudiante`
+WHERE `F`.`itc_idForo` = :F.itc_idForo:', [...], false)
+ 5 APPPATH\Models\ForoModel.php(78): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(43): App\Models\ForoModel->SelectPreguntaForo('1')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

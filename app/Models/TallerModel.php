@@ -111,7 +111,23 @@ class TallerModel extends Model
         $query = $builder->get();
         return $query;
     }
-
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna los datos del taller para el pdf
+     * 
+     * @param int $id
+     */
+    public function SelectByIdPDF($idTaller)
+    {
+        $builder = $this->db->table('taller T');
+        $builder->select("T.nombre AS 'nombreTaller', T.direccion AS 'direccion', T.telefono AS 'telefono', U.email AS 'email'");
+        $builder->join("usuario U", "U.idUsuario = T.idTaller", "inner");
+        $builder->where('idTaller', $idTaller);
+        $query = $builder->get();
+        return $query;
+    }
     /**
      * ---
      * Select
@@ -225,8 +241,10 @@ class TallerModel extends Model
      */
     public function SelectTalleres()
     {
-        $builder = $this->db->table('taller');
-        $builder->select("*");
+        $builder = $this->db->table('Taller T');
+        $builder->select("T.nombre AS 'nombre', T.fotoPerfil AS 'fotoPerfil', T.idTaller AS 'idTaller', AVG(C.calificacion) AS 'calificacion'");
+        $builder->join("calificacion C", "C.idTaller = T.idTaller", "left");
+        $builder->groupBy("T.idTaller");
         $query = $builder->get();
         return $query->getResult();
     }

@@ -29,11 +29,58 @@
 									?>
 									
 									<br>
-									<button class="btn btn-lg p-0 m-0 "><span class="bi bi-star-fill icon icon-estrella"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star-fill icon icon-estrella"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star-half icon icon-estrella"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star icon icon-estrella"></span></button>
-									<button class="btn btn-lg p-0 m-0"><span class="bi bi-star icon icon-estrella"></span></button>
+									<?php  
+										if ($row->calificacion > 0) 
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','1')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-1" class="bi bi-star-fill icon icon-estrella estrella estrella-pintada"></span></button>
+										<?php
+										}
+										else
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','1')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-1" class="bi bi-star-fill icon icon-estrella estrella"></span></button>
+										<?php
+										}
+										if ($row->calificacion > 1) 
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','2')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-2" class="bi bi-star-fill icon icon-estrella estrella estrella-pintada"></span></button>
+										<?php
+										}
+										else
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','2')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-2" class="bi bi-star-fill icon icon-estrella estrella"></span></button>
+										<?php
+										}
+										if ($row->calificacion > 2) 
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','3')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-3" class="bi bi-star-fill icon icon-estrella estrella estrella-pintada"></span></button>
+										<?php
+										}
+										else
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','3')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-3" class="bi bi-star-fill icon icon-estrella estrella"></span></button>
+										<?php
+										}
+										if ($row->calificacion > 3) 
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','4')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-4" class="bi bi-star-fill icon icon-estrella estrella estrella-pintada"></span></button>
+										<?php
+										}
+										else
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','4')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-4" class="bi bi-star-fill icon icon-estrella estrella"></span></button>
+										<?php
+										}
+										if ($row->calificacion > 4) 
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','5')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-5" class="bi bi-star-fill icon icon-estrella estrella estrella-pintada"></span></button>
+										<?php
+										}
+										else
+										{?>
+											<button class="btn btn-lg p-0 m-0" onclick="calificarTaller('<?php echo $row->idTaller; ?>','5')" data-bs-toggle="modal" data-bs-target="#mdCalificar"><span id="star-5" class="bi bi-star-fill icon icon-estrella estrella"></span></button>
+										<?php
+										}
+									?>
 									<form action="<?php echo base_url('public/taller/detalletaller') ?>" target="_self" method="post">
 										<input type="text" name="taller" hidden value="<?php echo $row->idTaller?>">
 										<button type="submit" class="btn btn-bg rounded-pill font-monserrat-black">VER MÁS</button>
@@ -47,6 +94,27 @@
 			</div>
 		</div>
 	</div>
+</div>
+<!-- Modal Confirmar Cita-->
+
+<div class="modal fade" id="mdCalificar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 id="staticBackdropLabel">Confirmar Calificacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="<?php echo base_url('public/calificar/registrarcalificacion') ?>" target="_self" method="post">
+      	<input type="text" name="idTaller" id="idTaller" hidden>
+	      	<input type="text" name="calificacion" id="calificacion" hidden>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" >Guardar</button>
+	      </div>
+      </form>
+      
+    </div>
+  </div>
 </div>
 <?php
 if ($messageReport=='1') {
@@ -153,4 +221,63 @@ if ($messageReport=='4') {
 	</div>
 <?php
 }
+if ($messageReport=='5') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-6">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">CALIFICAÓN EXITOSA</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Su calificación fue exitsa gracias por calificar un taller</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/taller/listataller')?>"><img src="<?php echo base_url('sources/images/done.png') ?>" class="align-items-center text-center" alt="ok logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
+if ($messageReport=='6') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-6">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Hubo un error al calificar un taller intentelo otra vez por favor</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/taller/listataller')?>"><img src="<?php echo base_url('sources/images/fail.png') ?>" class="align-items-center text-center" alt="fail logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
 ?>
+<script type="text/javascript">
+	function calificarTaller(taller, calificacion) 
+	{
+        document.getElementById("idTaller").value = taller;
+        document.getElementById("calificacion").value = calificacion;
+    }
+</script>

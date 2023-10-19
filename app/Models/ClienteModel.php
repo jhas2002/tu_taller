@@ -49,6 +49,23 @@ class ClienteModel extends Model
         $query = $builder->get();
         return $query;
     }
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna los datos del cliente para el pdf
+     * 
+     * @param int $id
+     */
+    public function SelectByIdPDF($idCliente)
+    {
+        $builder = $this->db->table('cliente C');
+        $builder->select("CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'nombre', C.celular AS 'celular', U.email AS 'email'");
+        $builder->join("usuario U", "U.idUsuario = C.idCliente", "inner");
+        $builder->where('C.idCliente', $idCliente);
+        $query = $builder->get();
+        return $query;
+    }
 
     /**
      * ---

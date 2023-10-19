@@ -112,5 +112,21 @@ class CotizacionModel extends Model
         $query = $builder->get();
         return $query->getResult();
     }
+
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna datos de una cotizacion
+     */
+    public function SelectCotizacionPDF($idCotizacion)
+    {
+        $builder = $this->db->table('cotizacion C');
+        $builder->select("C.fechaCreacion AS 'fecha', C.descripcionSolucion AS 'solucion', C.tiempoAprox AS 'tiempo', C.costo AS 'costo', S.descripcion AS 'servicio', C.idTaller AS 'idTaller', C.idCliente AS 'idCliente'");
+        $builder->join("servicio S", "S.idServicio = C.idServicio", "inner");
+        $builder->where("C.idCotizacion", $idCotizacion);
+        $query = $builder->get();
+        return $query->getResult();
+    }
     
 }

@@ -17,7 +17,7 @@
 							Nombre: <?php echo $nombre ?> <br>
 							Numero Telefono: <?php echo $telefono ?> <br>
 							Direccón: <?php echo $direccion ?> <br>
-							<a href="https://maps.google.com/?q=<?php echo $latitud.','.$longitud;?>">VER EN MAPA</a>
+							<a target="_blanck" href="https://maps.google.com/?q=<?php echo $latitud.','.$longitud;?>">VER EN MAPA</a>
 						</p>
 						<h4 class="font-bebas sb-t-verde">DESCRIPCIÓN</h4>
 						<p class="font-monserrat-regular text-negrita">

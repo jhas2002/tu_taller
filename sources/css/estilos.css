@@ -11,6 +11,14 @@
   color: #fff!important;
   font-size: 25px;
 }
+.estrella-pintada{
+  color: #001FFF!important;
+}
+
+.estrella:hover{
+  color: #28E6FD!important;
+}
+
 /*ICON ESTRELLASFIN*/
 /*Fondo para lista talleres*/
 .fondo1{

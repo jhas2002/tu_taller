@@ -97,7 +97,7 @@ if ($messageReport=='1') {
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
-					    		<a href="<?php echo base_url('public/cotizacion/listacotizacionpentientetaller')?>"><img src="<?php echo base_url('sources/images/done.png') ?>" class="align-items-center text-center" alt="ok logo" style="width: 100px;"></a>
+					    		<a href="<?php echo base_url('public/cotizacion/listacotizacionpendientetaller')?>"><img src="<?php echo base_url('sources/images/done.png') ?>" class="align-items-center text-center" alt="ok logo" style="width: 100px;"></a>
 					    	</div>
 					    </div>
 				    </div>
