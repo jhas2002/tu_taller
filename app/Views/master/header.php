@@ -48,7 +48,7 @@
 				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">AGENDAR</button>
 				                </a>
-				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
+				                <a href="<?php echo base_url('public/ayuda/mapaayuda')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">SOLICITAR AYUDA</button>
 				                </a>
 				                <a href="<?php echo base_url('public/foro/listaforo')?>" class="eliminar-subrayado nav-item nav-link">

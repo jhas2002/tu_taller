@@ -1,7 +1,6 @@
 <?php  
 
 namespace App\Controllers;
-use App\Models\CursoModel;
 use App\Models\ForoModel;
 
 date_default_timezone_set('America/La_Paz');
@@ -44,8 +43,6 @@ class Foro extends BaseController
         foreach ($dataPregunta as $row) 
         {
             $data['nombre'] = $row->nombre;
-            $data['primerApellido'] = $row->primerApellido;
-            $data['segundoApellido'] = $row->segundoApellido;
             $data['pregunta'] = $row->pregunta;
             $data['foto'] = $row->foto;
             $data['idUsuario'] = $row->idUsuario;

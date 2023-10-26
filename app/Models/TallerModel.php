@@ -248,5 +248,20 @@ class TallerModel extends Model
         $query = $builder->get();
         return $query->getResult();
     }
+    /**
+     * ---
+     * Select
+     * ---
+     * Retorna todos los datos de los talleres
+     * 
+     * 
+     */
+    public function SelectTalleresAyuda()
+    {
+        $builder = $this->db->table('taller');
+        $builder->select("nombre, idTaller, latitud, longitud");
+        $query = $builder->get();
+        return $query->getResult();
+    }
 
 }
