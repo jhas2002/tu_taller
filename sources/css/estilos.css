@@ -18,7 +18,10 @@
 .estrella:hover{
   color: #28E6FD!important;
 }
-
+.icon-estrella-ayuda{
+  color: #99A3A4!important;
+  font-size: 25px;
+}
 /*ICON ESTRELLASFIN*/
 /*Fondo para lista talleres*/
 .fondo1{
@@ -115,5 +118,8 @@
 }
 .img-tamaño-foro2{
   width: 50px;
+}
+.img-card-ayuda{
+  width: 100px!important;
 }
 /*Tamaño imagenes FIN*/

@@ -1,0 +1,182 @@
+ERROR - 2023-11-15 09:32:11 --> mysqli_sql_exception: Unknown column 'T.nombre' in 'field list' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT T.nombre...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT T.nombre...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT T.nombre...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT T.nombre...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\TallerModel.php(265): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Ayuda.php(24): App\Models\TallerModel->SelectTalleresAyuda()
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-15 09:32:11 --> Unknown column 'T.nombre' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT T.nombre AS \'nombre\', T.idTaller AS \'idTaller\', T.latitud AS \'latitud\', T.longitud AS \'longitud\', T.fotoPerfil AS \'fotoPerfil\', AVG(C.calificacion) AS \'calificacion\'
+FROM `taller`
+LEFT JOIN `calificacion` `C` ON `C`.`idTaller` = `T`.`idTaller`
+GROUP BY `T`.`idTaller`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT T.nombre AS \'nombre\', T.idTaller AS \'idTaller\', T.latitud AS \'latitud\', T.longitud AS \'longitud\', T.fotoPerfil AS \'fotoPerfil\', AVG(C.calificacion) AS \'calificacion\'
+FROM `taller`
+LEFT JOIN `calificacion` `C` ON `C`.`idTaller` = `T`.`idTaller`
+GROUP BY `T`.`idTaller`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT T.nombre AS \'nombre\', T.idTaller AS \'idTaller\', T.latitud AS \'latitud\', T.longitud AS \'longitud\', T.fotoPerfil AS \'fotoPerfil\', AVG(C.calificacion) AS \'calificacion\'
+FROM `taller`
+LEFT JOIN `calificacion` `C` ON `C`.`idTaller` = `T`.`idTaller`
+GROUP BY `T`.`idTaller`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT T.nombre AS \'nombre\', T.idTaller AS \'idTaller\', T.latitud AS \'latitud\', T.longitud AS \'longitud\', T.fotoPerfil AS \'fotoPerfil\', AVG(C.calificacion) AS \'calificacion\'
+FROM `taller`
+LEFT JOIN `calificacion` `C` ON `C`.`idTaller` = `T`.`idTaller`
+GROUP BY `T`.`idTaller`', [], false)
+ 5 APPPATH\Models\TallerModel.php(265): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Ayuda.php(24): App\Models\TallerModel->SelectTalleresAyuda()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 16:38:58 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 62.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Views\\ayuda\\mapaAyudaView.php', 62)
+ 2 APPPATH\Views\ayuda\mapaAyudaView.php(62): explode('C:\\', null)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\mapaAyudaView.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 6 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 16:39:13 --> explode(): Passing null to parameter #2 ($string) of type string is deprecated
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 62.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'explode(): Passing null to parameter #2 ($string) of type string is deprecated', 'APPPATH\\Views\\ayuda\\mapaAyudaView.php', 62)
+ 2 APPPATH\Views\ayuda\mapaAyudaView.php(62): explode('C:\\', null)
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\mapaAyudaView.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 6 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 16:39:46 --> Undefined variable $lista
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 68.
+ 1 APPPATH\Views\ayuda\mapaAyudaView.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lista', 'APPPATH\\Views\\ayuda\\mapaAyudaView.php', 68)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\mapaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 16:46:43 --> Unmatched '}'
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 125.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 3 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 16:47:14 --> Unmatched '}'
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 99.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 3 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 17:00:51 --> Undefined array key 4
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 81.
+ 1 APPPATH\Views\ayuda\mapaAyudaView.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'APPPATH\\Views\\ayuda\\mapaAyudaView.php', 81)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\mapaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 17:01:01 --> Undefined array key 3
+in APPPATH\Views\ayuda\mapaAyudaView.php on line 81.
+ 1 APPPATH\Views\ayuda\mapaAyudaView.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', 'APPPATH\\Views\\ayuda\\mapaAyudaView.php', 81)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\mapaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/mapaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(27): view('ayuda/mapaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->mapaAyuda()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 17:07:50 --> Call to undefined method App\Controllers\Ayuda::getPost()
+in APPPATH\Controllers\Ayuda.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->solicitarAyuda()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 17:08:48 --> Call to undefined method App\Controllers\Ayuda::getPost()
+in APPPATH\Controllers\Ayuda.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->solicitarAyuda()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 17:09:28 --> Call to undefined method App\Controllers\Ayuda::getPost()
+in APPPATH\Controllers\Ayuda.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->solicitarAyuda()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 20:00:19 --> Undefined variable $citas
+in APPPATH\Views\ayuda\listaAyudaView.php on line 27.
+ 1 APPPATH\Views\ayuda\listaAyudaView.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $citas', 'APPPATH\\Views\\ayuda\\listaAyudaView.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\listaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/listaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(72): view('ayuda/listaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->listaAyudaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 20:08:09 --> Undefined property: stdClass::$descripcionProblema
+in APPPATH\Views\ayuda\listaAyudaView.php on line 32.
+ 1 APPPATH\Views\ayuda\listaAyudaView.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$descripcionProblema', 'APPPATH\\Views\\ayuda\\listaAyudaView.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\listaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/listaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(72): view('ayuda/listaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->listaAyudaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 21:37:58 --> Undefined variable $idAyuda
+in APPPATH\Models\AyudaModel.php on line 70.
+ 1 APPPATH\Models\AyudaModel.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idAyuda', 'APPPATH\\Models\\AyudaModel.php', 70)
+ 2 APPPATH\Controllers\Ayuda.php(84): App\Models\AyudaModel->UpdateAyudaEstado('3', 2, '2023-11-15 09:37:58 pm')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->aceptarAyuda()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 21:58:25 --> Undefined variable $row
+in APPPATH\Views\ayuda\listaAyudaView.php on line 76.
+ 1 APPPATH\Views\ayuda\listaAyudaView.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\ayuda\\listaAyudaView.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\listaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/listaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(72): view('ayuda/listaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->listaAyudaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 21:59:19 --> Undefined variable $row
+in APPPATH\Views\ayuda\listaAyudaView.php on line 76.
+ 1 APPPATH\Views\ayuda\listaAyudaView.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\ayuda\\listaAyudaView.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ayuda\\listaAyudaView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('ayuda/listaAyudaView', [], true)
+ 5 APPPATH\Controllers\Ayuda.php(72): view('ayuda/listaAyudaView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Ayuda->listaAyudaTaller()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ayuda))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

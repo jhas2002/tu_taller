@@ -74,6 +74,26 @@ class TallerModel extends Model
     }
     /**
      * ---
+     * Select
+     * ---
+     * Retorna el numero de un taller
+     * 
+     * @param String $nombreDia
+     */
+    public function SelecNumeroTaller($idTaller)
+    {
+        $builder = $this->db->table('taller');
+        $builder->select("*");
+        $builder->where('idTaller',$idTaller);
+        $query = $builder->get();
+        $res = 0;
+        foreach ($query->getResult() as $row) {
+            $res = $row->telefono;
+        }
+        return $res;
+    }
+    /**
+     * ---
      * Insert
      * ---
      * Inserta a los datos de un Servicio a un taller
@@ -258,8 +278,10 @@ class TallerModel extends Model
      */
     public function SelectTalleresAyuda()
     {
-        $builder = $this->db->table('taller');
-        $builder->select("nombre, idTaller, latitud, longitud");
+        $builder = $this->db->table('taller T');
+        $builder->select("T.nombre AS 'nombre', T.idTaller AS 'idTaller', T.latitud AS 'latitud', T.longitud AS 'longitud',T.fotoPerfil AS 'fotoPerfil', AVG(C.calificacion) AS 'calificacion'");
+        $builder->join("calificacion C", "C.idTaller = T.idTaller", "left");
+        $builder->groupBy("T.idTaller");
         $query = $builder->get();
         return $query->getResult();
     }
