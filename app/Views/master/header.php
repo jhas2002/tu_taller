@@ -93,7 +93,7 @@
 				                <a href="<?php echo base_url('public/ayuda/listaayudataller')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">AYUDAS</button>
 				                </a>
-				                <a href="<?php echo base_url('public/reportes/listaayudataller')?>" class="eliminar-subrayado nav-item nav-link">
+				                <a href="<?php echo base_url('public/reporte/reportes')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">REPORTES</button>
 				                </a>
 				                <div class="nav-item dropdown">

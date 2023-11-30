@@ -81,5 +81,11 @@ return array (
   'glyphicons halflings' => array(
     'normal' => $fontDir . '/glyphicons_halflings_normal_448cf7c5a9f8cf5b480d96c9606cc001',
   ),
+  'bebas neue' => array(
+    'normal' => $fontDir . '/bebas_neue_normal_cfaf406f3cce949024afc02f0a8881f5',
+  ),
+  'montserrat' => array(
+    '500' => $fontDir . '/montserrat_500_1236ec90acb329158f494b3fcb44327e',
+  ),
 );
 }; ?>

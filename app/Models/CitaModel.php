@@ -101,7 +101,7 @@ class CitaModel extends Model
      * @param int $estado
      * @param date $fechaActualizacion
      */
-    public function UpdateCitaEstadoRechazar($idCita, $estado, $fechaActualizacion)
+    public function UpdateCitaEstado($idCita, $estado, $fechaActualizacion)
     {
         $builder = $this->db->table('cita');
         $builder->set('estado', $estado);

@@ -58,6 +58,50 @@ class Cita extends BaseController
         echo view('cita/listaCitasView', $data);
         echo view('master/footer');
     }
+    public function finalizarCita()
+    {
+        $idCita = $this->request->getPost('idCita');
+
+        $citaModel = new CitaModel();
+
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $respuesta = $citaModel->UpdateCitaEstado($idCita, 2, $fechaActualizacion);
+
+        if ($respuesta > 0) 
+        {
+
+            $url = base_url('public/cita/listaCitaTaller');
+            return redirect()->to($url)->with('messageReport','1');
+        }
+        else
+        {
+            $url = base_url('public/cita/listaCitaTaller');
+            return redirect()->to($url)->with('messageReport','2');
+        }
+    }
+    public function cancelarCita()
+    {
+        $idCita = $this->request->getPost('idCita');
+
+        $citaModel = new CitaModel();
+
+        $fechaActualizacion = date('Y-m-d h:i:s a', time());
+
+        $respuesta = $citaModel->UpdateCitaEstado($idCita, 3, $fechaActualizacion);
+
+        if ($respuesta > 0) 
+        {
+
+            $url = base_url('public/cita/listaCitaTaller');
+            return redirect()->to($url)->with('messageReport','3');
+        }
+        else
+        {
+            $url = base_url('public/cita/listaCitaTaller');
+            return redirect()->to($url)->with('messageReport','4');
+        }
+    }
     public function listaCitaPendienteTaller()
     {
         $session = session();
@@ -121,7 +165,7 @@ class Cita extends BaseController
 
         $fechaActualizacion = date('Y-m-d h:i:s a', time());
         $email = $clienteModel->SelectEmailById($idCliente);
-        $respuesta = $citaModel->UpdateCitaEstadoRechazar($idCita, -1, $fechaActualizacion);
+        $respuesta = $citaModel->UpdateCitaEstado($idCita, -1, $fechaActualizacion);
 
         if ($respuesta > 0) 
         {

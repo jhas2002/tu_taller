@@ -1,0 +1,278 @@
+CRITICAL - 2023-11-29 15:41:10 --> Undefined variable $dataDetalleReporte
+in APPPATH\Views\reporte\reporteView.php on line 99.
+ 1 APPPATH\Views\reporte\reporteView.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataDetalleReporte', 'APPPATH\\Views\\reporte\\reporteView.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(57): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 15:42:10 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 99.
+ 1 APPPATH\Views\reporte\reporteView.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(59): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 15:42:33 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 99.
+ 1 APPPATH\Views\reporte\reporteView.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(59): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 15:42:35 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 99.
+ 1 APPPATH\Views\reporte\reporteView.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 99)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(59): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 15:43:53 --> Undefined property: stdClass::$clietne
+in APPPATH\Views\reporte\reporteView.php on line 105.
+ 1 APPPATH\Views\reporte\reporteView.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$clietne', 'APPPATH\\Views\\reporte\\reporteView.php', 105)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(59): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 16:04:45 --> The PHP GD extension is required, but is not installed.
+in APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\lib\Cpdf.php on line 5825.
+ 1 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Adapter\CPDF.php(846): Dompdf\Cpdf->addPngFromFile('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_CA3C.tmp', 208.5, 387.0, 375.0, 225.0)
+ 2 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer\Image.php(65): Dompdf\Adapter\CPDF->image('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_CA3C.tmp', 208.5, 0.0, 375.0, 225.0, 'normal')
+ 3 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(127): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Page.php(150): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(891): Dompdf\FrameReflower\Page->reflow(null)
+ 9 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(820): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+10 APPPATH\Controllers\Reporte.php(118): Dompdf\Dompdf->render()
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 16:04:51 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 16:08:24 --> The PHP GD extension is required, but is not installed.
+in APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\lib\Cpdf.php on line 5825.
+ 1 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Adapter\CPDF.php(846): Dompdf\Cpdf->addPngFromFile('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_1DF2.tmp', 208.5, 387.0, 375.0, 225.0)
+ 2 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer\Image.php(65): Dompdf\Adapter\CPDF->image('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_1DF2.tmp', 208.5, 0.0, 375.0, 225.0, 'normal')
+ 3 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(127): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Page.php(150): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(891): Dompdf\FrameReflower\Page->reflow(null)
+ 9 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(820): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+10 APPPATH\Controllers\Reporte.php(118): Dompdf\Dompdf->render()
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 16:08:28 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 16:17:18 --> The PHP GD extension is required, but is not installed.
+in APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\lib\Cpdf.php on line 5825.
+ 1 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Adapter\CPDF.php(846): Dompdf\Cpdf->addPngFromFile('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_488F.tmp', 208.5, 387.0, 375.0, 225.0)
+ 2 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer\Image.php(65): Dompdf\Adapter\CPDF->image('C:\\Users\\GEEK STORE\\AppData\\Local\\Temp\\ca_488F.tmp', 208.5, 0.0, 375.0, 225.0, 'normal')
+ 3 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(290): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(127): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Renderer.php(194): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameReflower\Page.php(150): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(891): Dompdf\FrameReflower\Page->reflow(null)
+ 9 APPPATH\Libraries\dompdf\vendor\dompdf\dompdf\src\Dompdf.php(820): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+10 APPPATH\Controllers\Reporte.php(118): Dompdf\Dompdf->render()
+11 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+13 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 16:17:24 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 262148096 bytes)
+in APPPATH\Views\errors\html\error_exception.php on line 96.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-29 17:04:04 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 183.
+ 1 APPPATH\Views\reporte\reporteView.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(60): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 17:10:05 --> Array to string conversion
+in APPPATH\Views\reporte\reportePDFView.php on line 181.
+ 1 APPPATH\Views\reporte\reportePDFView.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\reporte\\reportePDFView.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reportePDFView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reportePDFView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(105): view('reporte/reportePDFView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 17:10:19 --> Undefined array key 1
+in APPPATH\Views\reporte\reportePDFView.php on line 181.
+ 1 APPPATH\Views\reporte\reportePDFView.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Views\\reporte\\reportePDFView.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reportePDFView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reportePDFView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(105): view('reporte/reportePDFView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 17:11:15 --> Undefined variable $año
+in APPPATH\Controllers\Reporte.php on line 96.
+ 1 APPPATH\Controllers\Reporte.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $año', 'APPPATH\\Controllers\\Reporte.php', 96)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 17:13:53 --> Undefined property: stdClass::$nobmre
+in APPPATH\Views\reporte\reportePDFView.php on line 200.
+ 1 APPPATH\Views\reporte\reportePDFView.php(200): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nobmre', 'APPPATH\\Views\\reporte\\reportePDFView.php', 200)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reportePDFView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reportePDFView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(112): view('reporte/reportePDFView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:25:03 --> Undefined property: stdClass::$nombre
+in APPPATH\Views\reporte\reporteView.php on line 225.
+ 1 APPPATH\Views\reporte\reporteView.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'APPPATH\\Views\\reporte\\reporteView.php', 225)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(73): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:35:51 --> Attempt to read property "nombre" on int
+in APPPATH\Controllers\Reporte.php on line 71.
+ 1 APPPATH\Controllers\Reporte.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on int', 'APPPATH\\Controllers\\Reporte.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:36:00 --> Attempt to read property "nombre" on int
+in APPPATH\Controllers\Reporte.php on line 71.
+ 1 APPPATH\Controllers\Reporte.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on int', 'APPPATH\\Controllers\\Reporte.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:36:16 --> Attempt to read property "nombre" on string
+in APPPATH\Controllers\Reporte.php on line 71.
+ 1 APPPATH\Controllers\Reporte.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on string', 'APPPATH\\Controllers\\Reporte.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:36:31 --> Attempt to read property "nombre" on string
+in APPPATH\Controllers\Reporte.php on line 71.
+ 1 APPPATH\Controllers\Reporte.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on string', 'APPPATH\\Controllers\\Reporte.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:40:07 --> Attempt to read property "nombre" on array
+in APPPATH\Controllers\Reporte.php on line 72.
+ 1 APPPATH\Controllers\Reporte.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Controllers\\Reporte.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:44:40 --> Undefined variable $total
+in APPPATH\Controllers\Reporte.php on line 69.
+ 1 APPPATH\Controllers\Reporte.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'APPPATH\\Controllers\\Reporte.php', 69)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:46:56 --> Undefined variable $atencion
+in APPPATH\Controllers\Reporte.php on line 75.
+ 1 APPPATH\Controllers\Reporte.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $atencion', 'APPPATH\\Controllers\\Reporte.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:49:14 --> Attempt to read property "nombre" on array
+in APPPATH\Views\reporte\reporteView.php on line 225.
+ 1 APPPATH\Views\reporte\reporteView.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\reporte\\reporteView.php', 225)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(91): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 19:53:27 --> Attempt to read property "cantidad" on array
+in APPPATH\Views\reporte\reporteView.php on line 267.
+ 1 APPPATH\Views\reporte\reporteView.php(267): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "cantidad" on array', 'APPPATH\\Views\\reporte\\reporteView.php', 267)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(91): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:04:04 --> Attempt to read property "nombre" on array
+in APPPATH\Views\reporte\reportePDFView.php on line 43.
+ 1 APPPATH\Views\reporte\reportePDFView.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\reporte\\reportePDFView.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reportePDFView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reportePDFView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(169): view('reporte/reportePDFView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:07:44 --> Attempt to read property "nombre" on array
+in APPPATH\Views\reporte\reportePDFView.php on line 69.
+ 1 APPPATH\Views\reporte\reportePDFView.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\reporte\\reportePDFView.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reportePDFView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reportePDFView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(169): view('reporte/reportePDFView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-29 20:08:31 --> Attempt to read property "nombre" on array
+in APPPATH\Views\reporte\reportePDFView.php on line 93.
+ 1 APPPATH\Views\reporte\reportePDFView.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nombre" on array', 'APPPATH\\Views\\reporte\\reportePDFView.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reportePDFView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reportePDFView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(169): view('reporte/reportePDFView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportePDF()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

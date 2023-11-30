@@ -286,4 +286,105 @@ class TallerModel extends Model
         return $query->getResult();
     }
 
+
+    /**
+     * ---
+     * Select
+     * ---
+     * Selecciona la cantidad de citas de un taller por tipo 
+     */
+    public function SelectTipoServicioTallerCita($fechaInicio, $fechaFinal, $idTaller)
+    {
+        $builder = $this->db->table('cita C');
+        $builder->select("S.descripcion AS 'nombre', COUNT(S.idServicio) AS 'cantidad'");
+        $builder->join("servicio S", "S.idServicio = C.idServicio", "inner");
+        $where = " C.idTaller ='".$idTaller."' AND C.fechaCreacion BETWEEN '".$fechaInicio."' AND '".$fechaFinal."'";
+        $builder->where($where);
+        $builder->groupBy('nombre');
+        $query = $builder->get();
+        return $query->getResult();
+    }
+    /**
+     * ---
+     * Select
+     * ---
+     * Selecciona el detalle de citas de un taller por tipo 
+     */
+    public function SelectDetalleTipoServicioTallerCita($fechaInicio, $fechaFinal, $idTaller)
+    {
+        $builder = $this->db->table('cita C');
+        $builder->select("CONCAT(CL.nombres,' ', CL.primerApellido,' ', CL.segundoApellido) AS 'cliente', S.descripcion AS 'servicio', C.fechaCita AS 'fechaCita', C.estado AS 'estado'");
+        $builder->join("servicio S", "S.idServicio = C.idServicio", "inner");
+        $builder->join("cliente CL", "CL.idCliente = C.idCliente", "inner");
+        $where = " C.idTaller ='".$idTaller."' AND C.fechaCreacion BETWEEN '".$fechaInicio."' AND '".$fechaFinal."'";
+        $builder->where($where);
+        $query = $builder->get();
+        return $query->getResult();
+    }
+
+    /**
+     * ---
+     * Select
+     * ---
+     * Selecciona la cantidad de cotizaciones de un taller por tipo 
+     */
+    public function SelectTipoServicioTallerCotizacion($fechaInicio, $fechaFinal, $idTaller)
+    {
+        $builder = $this->db->table('cotizacion C');
+        $builder->select("S.descripcion AS 'nombre', COUNT(S.idServicio) AS 'cantidad'");
+        $builder->join("servicio S", "S.idServicio = C.idServicio", "inner");
+        $where = " C.idTaller ='".$idTaller."' AND C.fechaCreacion BETWEEN '".$fechaInicio."' AND '".$fechaFinal."'";
+        $builder->where($where);
+        $builder->groupBy('nombre');
+        $query = $builder->get();
+        return $query->getResult();
+    }
+    /**
+     * ---
+     * Select
+     * ---
+     * Selecciona el detalle de cotizaciones de un taller por tipo 
+     */
+    public function SelectDetalleTipoServicioTallerCotizacion($fechaInicio, $fechaFinal, $idTaller)
+    {
+        $builder = $this->db->table('cotizacion C');
+        $builder->select("CONCAT(CL.nombres,' ', CL.primerApellido,' ', CL.segundoApellido) AS 'cliente', S.descripcion AS 'servicio', C.costo AS 'costo'");
+        $builder->join("servicio S", "S.idServicio = C.idServicio", "inner");
+        $builder->join("cliente CL", "CL.idCliente = C.idCliente", "inner");
+        $where = " C.idTaller ='".$idTaller."' AND C.fechaCreacion BETWEEN '".$fechaInicio."' AND '".$fechaFinal."'";
+        $builder->where($where);
+        $query = $builder->get();
+        return $query->getResult();
+    }
+    /**
+     * ---
+     * Select
+     * ---
+     * Selecciona la cantidad de calificacion de un taller por mes 
+     */
+    public function SelectCalificacionTallerMes($año, $idTaller)
+    {
+        $builder = $this->db->table('calificacion C');
+        $builder->select("MONTH(C.fechaCreacion) AS 'nombre', AVG(C.calificacion) AS 'cantidad'");
+        $where = " C.idTaller ='".$idTaller."' AND YEAR(C.fechaCreacion) ='".$año."'";
+        $builder->where($where);
+        $builder->groupBy('nombre');
+        $query = $builder->get();
+        return $query->getResult();
+    }
+    /**
+     * ---
+     * Select
+     * ---
+     * Selecciona la cantidad de citas de un taller 
+     */
+    public function SelectCitaTaller($fechaInicio, $fechaFinal, $idTaller)
+    {
+        $builder = $this->db->table('cita C');
+        $builder->select("COUNT(C.idCita) AS 'total', (SELECT COUNT(CI.idCita) FROM cita CI WHERE CI.estado = -1 AND CI.idTaller = C.idTaller) AS 'rechazado', (SELECT COUNT(CI.idCita) FROM cita CI WHERE CI.estado = 0 AND CI.idTaller = C.idTaller) AS 'pendiente',(SELECT COUNT(CI.idCita) FROM cita CI WHERE CI.estado = 1 AND CI.idTaller = C.idTaller) AS 'atencion', (SELECT COUNT(CI.idCita) FROM cita CI WHERE CI.estado = 2 AND CI.idTaller = C.idTaller) AS 'finalizado', (SELECT COUNT(CI.idCita) FROM cita CI WHERE CI.estado = 3 AND CI.idTaller = C.idTaller) AS 'inasistencia'");
+        $where = " C.idTaller ='".$idTaller."' AND C.fechaCreacion BETWEEN '".$fechaInicio."' AND '".$fechaFinal."'";
+        $builder->where($where);
+        $query = $builder->get();
+        return $query->getResult();
+    }
 }

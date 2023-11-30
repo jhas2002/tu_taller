@@ -1,0 +1,168 @@
+CRITICAL - 2023-11-20 16:33:47 --> Class "App\Controllers\EmpresaModel" not found
+in APPPATH\Controllers\Reporte.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 16:56:38 --> syntax error, unexpected double-quoted string " AND C.fechaCreacion BETWEEN '"
+in APPPATH\Models\TallerModel.php on line 301.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\TallerModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\TallerModel')
+ 3 APPPATH\Controllers\Reporte.php(24): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\TallerModel')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-20 16:59:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `C`.`fechaCreacion` BETWEEN '2023-10-01' AND '2023-11-07'
+GROUP BY `nombre`' at line 4 in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT S.descri...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT S.descri...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT S.descri...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT S.descri...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\TallerModel.php(304): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Reporte.php(29): App\Models\TallerModel->SelectTipoServicioTallerMes('2023-10-01', '2023-11-07', NULL)
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-11-20 16:59:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `C`.`fechaCreacion` BETWEEN '2023-10-01' AND '2023-11-07'
+GROUP BY `nombre`' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT S.descripcion AS \'nombre\', COUNT(S.idServicio) AS \'cantidad\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+WHERE `C`.`idTaller` = AND `C`.`fechaCreacion` BETWEEN \'2023-10-01\' AND \'2023-11-07\'
+GROUP BY `nombre`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT S.descripcion AS \'nombre\', COUNT(S.idServicio) AS \'cantidad\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+WHERE `C`.`idTaller` = AND `C`.`fechaCreacion` BETWEEN \'2023-10-01\' AND \'2023-11-07\'
+GROUP BY `nombre`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT S.descripcion AS \'nombre\', COUNT(S.idServicio) AS \'cantidad\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+WHERE `C`.`idTaller` = AND `C`.`fechaCreacion` BETWEEN \'2023-10-01\' AND \'2023-11-07\'
+GROUP BY `nombre`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT S.descripcion AS \'nombre\', COUNT(S.idServicio) AS \'cantidad\'
+FROM `cita` `C`
+INNER JOIN `servicio` `S` ON `S`.`idServicio` = `C`.`idServicio`
+WHERE `C`.`idTaller` = AND `C`.`fechaCreacion` BETWEEN \'2023-10-01\' AND \'2023-11-07\'
+GROUP BY `nombre`', [], false)
+ 5 APPPATH\Models\TallerModel.php(304): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Reporte.php(29): App\Models\TallerModel->SelectTipoServicioTallerMes('2023-10-01', '2023-11-07', null)
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:00:16 --> Class "Empresa" not found
+in APPPATH\Views\reporte\reporteView.php on line 86.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 4 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:11:26 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 35.
+ 1 APPPATH\Views\reporte\reporteView.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:18:37 --> Array to string conversion
+in APPPATH\Views\reporte\reporteView.php on line 44.
+ 1 APPPATH\Views\reporte\reporteView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\reporte\\reporteView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:20:04 --> Array to string conversion
+in APPPATH\Views\reporte\reporteView.php on line 44.
+ 1 APPPATH\Views\reporte\reporteView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\reporte\\reporteView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:20:07 --> Array to string conversion
+in APPPATH\Views\reporte\reporteView.php on line 44.
+ 1 APPPATH\Views\reporte\reporteView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\reporte\\reporteView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:20:08 --> Array to string conversion
+in APPPATH\Views\reporte\reporteView.php on line 44.
+ 1 APPPATH\Views\reporte\reporteView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\reporte\\reporteView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:20:19 --> Array to string conversion
+in APPPATH\Views\reporte\reporteView.php on line 44.
+ 1 APPPATH\Views\reporte\reporteView.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\reporte\\reporteView.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:24:22 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 69.
+ 1 APPPATH\Views\reporte\reporteView.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:24:55 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\reporte\reporteView.php on line 128.
+ 1 APPPATH\Views\reporte\reporteView.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\reporte\\reporteView.php', 128)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 5 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-20 17:27:38 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\reporte\reporteView.php on line 13.
+ 1 APPPATH\Views\reporte\reporteView.php(13): implode(',', [...])
+ 2 APPPATH\Views\reporte\reporteView.php(34): php_console_log([...])
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\reporte\\reporteView.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('reporte/reporteView', [], true)
+ 6 APPPATH\Controllers\Reporte.php(52): view('reporte/reporteView', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Reporte->reportes()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reporte))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

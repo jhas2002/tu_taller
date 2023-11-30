@@ -38,6 +38,17 @@
   background: rgba(0,0,0,.6)!important;
   height: 100%;
 }
+.fondoForo{
+  /*margin-top: 50px;*/
+  background: url(../images/fondos/fondoForo.jpg);
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-repeat:no-repeat; /* No se repetira */
+  background-size:cover; /* Imagen al 100% del ancho */
+  background-attachment: fixed; /* Posicion fija para la imagen */
+}
+
 .card-difu{
   backdrop-filter: blur(10px)!important;
   background-color: rgba(255,255,255,0.4)!important;
