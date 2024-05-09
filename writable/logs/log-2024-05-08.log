@@ -1,0 +1,258 @@
+CRITICAL - 2024-05-08 15:57:04 --> Undefined variable $foto
+in APPPATH\Views\foro\detalleForoView.php on line 10.
+ 1 APPPATH\Views\foro\detalleForoView.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $foto', 'APPPATH\\Views\\foro\\detalleForoView.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\foro\\detalleForoView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('foro/detalleForoView', [], true)
+ 5 APPPATH\Controllers\Foro.php(54): view('foro/detalleForoView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:03:06 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Foro.php on line 68.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('foro/listaforo')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('foro/listaforo')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('foro/listaforo')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:03:56 --> syntax error, unexpected token "public", expecting end of file
+in APPPATH\Controllers\Foro.php on line 68.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('foro/listaforo')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('foro/listaforo')
+ 3 SYSTEMPATH\CodeIgniter.php(779): CodeIgniter\Router\Router->handle('foro/listaforo')
+ 4 SYSTEMPATH\CodeIgniter.php(406): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-08 16:10:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT C.descripcion AS 'comentario', CONCAT(CL.nombres, ' ', `CL`.`primerApelli' at line 1 in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SELECT C...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT C...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT C...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT SELECT C...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(98): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(58): App\Models\ForoModel->SelectRespuestas('7')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-08 16:10:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT C.descripcion AS 'comentario', CONCAT(CL.nombres, ' ', `CL`.`primerApelli' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'7\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'7\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+INNER JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+WHERE `C`.`idForo` = :C.idForo:', [...], false)
+ 5 APPPATH\Models\ForoModel.php(98): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(58): App\Models\ForoModel->SelectRespuestas('7')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-08 16:12:16 --> mysqli_sql_exception: Not unique table/alias: 'C' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descri...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descri...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descri...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descri...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Foro.php(58): App\Models\ForoModel->SelectRespuestas('7')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-08 16:12:16 --> Not unique table/alias: 'C'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'7\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'7\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `C` ON `C`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = :C.idForo:', [...], false)
+ 5 APPPATH\Models\ForoModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Foro.php(58): App\Models\ForoModel->SelectRespuestas('7')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:12:34 --> Undefined property: stdClass::$nombre
+in APPPATH\Views\foro\detalleForoView.php on line 72.
+ 1 APPPATH\Views\foro\detalleForoView.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'APPPATH\\Views\\foro\\detalleForoView.php', 72)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\foro\\detalleForoView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('foro/detalleForoView', [], true)
+ 5 APPPATH\Controllers\Foro.php(62): view('foro/detalleForoView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Foro->detalleForo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Foro))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:20:00 --> Undefined property: stdClass::$idForo
+in APPPATH\Controllers\Home.php on line 18.
+ 1 APPPATH\Controllers\Home.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idForo', 'APPPATH\\Controllers\\Home.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:22:20 --> Undefined property: stdClass::$nombre
+in APPPATH\Controllers\Home.php on line 21.
+ 1 APPPATH\Controllers\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'APPPATH\\Controllers\\Home.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-08 16:24:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '9'
+ LIMIT 2' at line 6 in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descri...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descri...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descri...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descri...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\ForoModel.php(120): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Home.php(18): App\Models\ForoModel->SelectRespuestasMain('9')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-08 16:24:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '9'
+ LIMIT 2' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'9\'
+ LIMIT 2', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'9\'
+ LIMIT 2')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = \'9\'
+ LIMIT 2')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT C.descripcion AS \'comentario\', CONCAT(CL.nombres, \' \', `CL`.`primerApellido`, \' \', CL.segundoApellido) AS \'cliente\', C.fechaCreacion AS \'fechaRegistro\', CL.foto AS \'foto\', U.idUsuario AS \'idUsuario\', T.nombre AS \'taller\', T.fotoPerfil AS \'fotoTaller\', U.rol AS \'rol\'\'
+FROM `comentario` `C`
+INNER JOIN `usuario` `U` ON `U`.`idUsuario` = `C`.`idUsuario`
+LEFT JOIN `cliente` `CL` ON `CL`.`idCliente` = `U`.`idUsuario`
+LEFT JOIN `taller` `T` ON `T`.`idTaller` = `U`.`idUsuario`
+WHERE `C`.`idForo` = :C.idForo:
+ LIMIT 2', [...], false)
+ 5 APPPATH\Models\ForoModel.php(120): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(18): App\Models\ForoModel->SelectRespuestasMain('9')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:26:12 --> Undefined property: stdClass::$fotoTaller
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$fotoTaller', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:27:06 --> Undefined property: stdClass::$fotoTaller
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$fotoTaller', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:28:26 --> Undefined property: stdClass::$nombre
+in APPPATH\Views\paginaPrincipal.php on line 106.
+ 1 APPPATH\Views\paginaPrincipal.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'APPPATH\\Views\\paginaPrincipal.php', 106)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paginaPrincipal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('paginaPrincipal', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('paginaPrincipal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:31:01 --> Attempt to read property "rol" on array
+in APPPATH\Views\paginaPrincipal.php on line 107.
+ 1 APPPATH\Views\paginaPrincipal.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rol" on array', 'APPPATH\\Views\\paginaPrincipal.php', 107)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paginaPrincipal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('paginaPrincipal', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('paginaPrincipal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:31:58 --> Attempt to read property "rol" on array
+in APPPATH\Views\paginaPrincipal.php on line 104.
+ 1 APPPATH\Views\paginaPrincipal.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rol" on array', 'APPPATH\\Views\\paginaPrincipal.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paginaPrincipal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('paginaPrincipal', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('paginaPrincipal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:32:05 --> Attempt to read property "idUsuario" on array
+in APPPATH\Views\paginaPrincipal.php on line 109.
+ 1 APPPATH\Views\paginaPrincipal.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idUsuario" on array', 'APPPATH\\Views\\paginaPrincipal.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paginaPrincipal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('paginaPrincipal', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('paginaPrincipal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-08 16:32:57 --> Attempt to read property "idUsuario" on array
+in APPPATH\Views\paginaPrincipal.php on line 109.
+ 1 APPPATH\Views\paginaPrincipal.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idUsuario" on array', 'APPPATH\\Views\\paginaPrincipal.php', 109)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\paginaPrincipal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('paginaPrincipal', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('paginaPrincipal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

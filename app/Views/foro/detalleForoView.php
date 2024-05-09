@@ -23,7 +23,7 @@
 								</div>
 								<?php  
 									$session = session();
-									if ($session->get('rol') == '2') 
+									if ($session->get('rol') == '2' || $session->get('rol') == '3') 
 									{?>
 										<div class="col-auto pt-2">
 											<button type="submit" class="btn btn-bg rounded-pill font-monserrat-black">COMENTAR</button> 
@@ -66,10 +66,30 @@
 							{?>
 								<div class="row pt-4 border-top border-4" style="border-color: #000!important">
 									<div class="col-md-1">
-										<img src="<?php if($row->foto == 0){echo base_url('sources/images/usuario/fotoUsuario.png');} else{echo base_url('sources/images/usuario').'/'.$row->idUsuario.'.jpg';} ?>" class="img-tamaño-foro2">
+										<?php
+										if ($row->rol == '2') {?>
+											<img src="<?php if($row->foto == 0){echo base_url('sources/images/usuario/fotoUsuario.png');} else{echo base_url('sources/images/usuario').'/'.$row->idUsuario.'.jpg';} ?>" class="img-tamaño-foro2">
+										  <?php
+										  }
+										if ($row->rol == '3') {?>
+											<img src="<?php if($row->fotoTaller == 0){echo base_url('sources/images/usuario/fotoUsuario.png');} else{echo base_url('sources/images/usuario').'/'.$row->idUsuario.'.jpg';} ?>" class="img-tamaño-foro2">
+											<?php
+										}
+										?>
+										
 									</div>
 									<div class="col-md-7">
-										<h4 class="font-monserrat-bold"><?php echo $row->nombre ?></h4>
+										<?php
+										if ($row->rol == '2') {?>
+											<h4 class="font-monserrat-bold"><?php echo $row->cliente ?></h4>
+										  <?php
+										  }
+										if ($row->rol == '3') {?>
+											<h4 class="font-monserrat-bold"><?php echo $row->taller ?></h4>
+											<?php
+										}
+										?>
+										
 										<h5 class="font-monserrat-regular"><?php echo $row->comentario ?></h5>
 									</div>
 								</div>

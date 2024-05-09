@@ -46,16 +46,28 @@ else
         <h5 id="staticBackdropLabel">Solicitar Ayuda</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="<?php echo base_url('public/ayuda/solicitarayuda') ?>" target="_self" method="post">
+      <form action="<?php echo base_url('public/ayuda/solicitarayuda') ?>" target="_self" method="post" class="needs-validation" novalidate>
         <div class="modal-body">
           <input type="text" name="idTaller" id="idTaller" hidden>
           <div class="form-group">
             <label>Descripción del problema</label>
-            <input type="text"  requiered name="txtProblema" class="form-control">
+            <input type="text"  requiered name="txtProblema" class="form-control" required>
+            <div class="valid-feedback">
+              Correcto.
+            </div>
+            <div class="invalid-feedback">
+              Este campo es obligatorio
+            </div>
           </div>
           <div class="form-group">
             <label>Descripción del automovil</label>
-            <input type="text"  requiered name="txtDescripcionAuto" class="form-control">
+            <input type="text"  requiered name="txtDescripcionAuto" class="form-control" required>
+            <div class="valid-feedback">
+              Correcto.
+            </div>
+            <div class="invalid-feedback">
+              Este campo es obligatorio
+            </div>
           </div>
           <div class="form-group">
             <input type="text"  requiered name="txtLongitud" id="txtLongitud" class="form-control" hidden>
@@ -310,6 +322,23 @@ function solicitarAyuda(idTaller)
         document.getElementById("idTaller").value = idTaller;
     }
 </script>
+<script type="text/javascript">
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
 
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcQ4yNd2AeeXine1Kl3Y1sBKIe1qJ0Ro&callback=initMap"
     async defer></script>

@@ -9,7 +9,7 @@
 			<div class="row pb-4">
 				<?php  
 					$session = session();
-					if ($session->get('rol') == '2') 
+					if ($session->get('rol') == '2' || $session->get('rol') == '3') 
 					{?>
 						<div class="col-md-4 text-center">
 							<button class="btn btn-success  btn-lg font-monserrat-black" data-bs-toggle="modal" data-bs-target="#mdRealizarPregunta">REALIZAR PREGUNTA</button>
@@ -66,7 +66,16 @@
 													<input type="text" name="foro" value="<?php echo $row->idForo ?>" hidden>
 													<a class="eliminar-subrayado text-ntc text-dark">
 														<button type="submit" class="text-start text-ntc border-0 bg-transparent">
-															<h6 class="text-negrita "><?php echo $row->nombre.': ' ?></h6>
+															<?php if ($row->rol == '2') { ?>
+																<h6 class="text-negrita "><?php echo $row->cliente.': ' ?></h6>
+															<?php
+															}
+															if ($row->rol == '3') {?>
+																	<h6 class="text-negrita "><?php echo $row->taller.': ' ?></h6>
+																	<?php
+																} 
+															?>
+															
 															<?php echo $row->pregunta ?>	
 														</button>
 													</a>

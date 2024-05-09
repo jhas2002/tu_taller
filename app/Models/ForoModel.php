@@ -35,9 +35,10 @@ class ForoModel extends Model
     public function SelectPreguntasForo()
     {
         $builder = $this->db->table('foro F');
-        $builder->select("F.pregunta AS 'pregunta', F.idForo AS 'idForo',C.foto AS 'foto',CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'nombre', F.idUsuario AS 'idUsuario', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS 'respuestas'");
+        $builder->select("F.pregunta AS 'pregunta', F.idForo AS 'idForo',C.foto AS 'foto',CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'cliente', F.idUsuario AS 'idUsuario', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS 'respuestas', T.nombre AS 'taller', U.rol AS 'rol'");
         $builder->join("usuario U", "U.idUsuario = F.idUsuario", "inner");
-        $builder->join("cliente C", "C.idCliente = U.idUsuario", "inner");
+        $builder->join("cliente C", "C.idCliente = U.idUsuario", "left");
+        $builder->join("taller T", "T.idTaller = U.idUsuario", "left");
         $query = $builder->get();
         return $query->getResult();
     }
@@ -52,9 +53,10 @@ class ForoModel extends Model
     public function SelectPreguntasForoMain()
     {
         $builder = $this->db->table('foro F');
-        $builder->select("F.pregunta AS 'pregunta', F.idForo AS 'idForo',C.foto AS 'foto',CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'nombre', F.idUsuario AS 'idUsuario'");
+        $builder->select("F.idForo AS 'idForo', F.pregunta AS 'pregunta', F.idForo AS 'idForo',C.foto AS 'foto',CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'cliente', F.idUsuario AS 'idUsuario', (SELECT COUNT(CM.idForo) FROM comentario CM WHERE CM.idForo = F.idForo) AS 'respuestas', T.nombre AS 'taller', U.rol AS 'rol', T.fotoPerfil AS 'fotoTaller'");
         $builder->join("usuario U", "U.idUsuario = F.idUsuario", "inner");
-        $builder->join("cliente C", "C.idCliente = U.idUsuario", "inner");
+        $builder->join("cliente C", "C.idCliente = U.idUsuario", "left");
+        $builder->join("taller T", "T.idTaller = U.idUsuario", "left");
         $builder->orderBy('F.fechaCreacion', 'desc');
         $builder->limit('3');
         $query = $builder->get();
@@ -71,9 +73,10 @@ class ForoModel extends Model
     public function SelectPreguntaForo($idForo)
     {
         $builder = $this->db->table('foro F');
-        $builder->select("F.pregunta AS 'pregunta', CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'nombre', C.foto AS 'foto', U.idUsuario AS 'idUsuario'");
+        $builder->select("F.pregunta AS 'pregunta', CONCAT(C.nombres,' ',C.primerApellido, ' ',C.segundoApellido) AS 'cliente', C.foto AS 'foto', U.idUsuario AS 'idUsuario', U.rol AS 'rol', T.nombre AS 'taller', T.fotoPerfil AS 'fotoTaller'");
         $builder->join("usuario U", "U.idUsuario = F.idUsuario", "inner");
-        $builder->join("cliente C", "C.idCliente = U.idUsuario", "inner");
+        $builder->join("cliente C", "C.idCliente = U.idUsuario", "left");
+        $builder->join("taller T", "T.idTaller = U.idUsuario", "left");
         $builder->where("F.idForo", $idForo);
         $query = $builder->get();
         return $query->getResult();
@@ -89,9 +92,10 @@ class ForoModel extends Model
     public function SelectRespuestas($idForo)
     {
         $builder = $this->db->table('comentario C');
-        $builder->select("C.descripcion AS 'comentario', CONCAT(CL.nombres,' ',CL.primerApellido, ' ',CL.segundoApellido) AS 'nombre', C.fechaCreacion AS 'fechaRegistro', CL.foto AS 'foto', U.idUsuario AS 'idUsuario'");
+        $builder->select("C.descripcion AS 'comentario', CONCAT(CL.nombres,' ',CL.primerApellido, ' ',CL.segundoApellido) AS 'cliente', C.fechaCreacion AS 'fechaRegistro', CL.foto AS 'foto', U.idUsuario AS 'idUsuario', T.nombre AS 'taller', T.fotoPerfil AS 'fotoTaller', U.rol AS 'rol'");
         $builder->join("usuario U", "U.idUsuario = C.idUsuario", "inner");
-        $builder->join("cliente CL", "CL.idCliente = U.idUsuario", "inner");
+        $builder->join("cliente CL", "CL.idCliente = U.idUsuario", "left");
+        $builder->join("taller T", "T.idTaller = U.idUsuario", "left");
         $builder->where("C.idForo", $idForo);
         $query = $builder->get();
         return $query->getResult();
@@ -107,9 +111,10 @@ class ForoModel extends Model
     public function SelectRespuestasMain($idForo)
     {
         $builder = $this->db->table('comentario C');
-        $builder->select("C.descripcion AS 'comentario', CONCAT(CL.nombres,' ',CL.primerApellido, ' ',CL.segundoApellido) AS 'nombre', C.fechaCreacion AS 'fechaRegistro', CL.foto AS 'foto', U.idUsuario AS 'idUsuario'");
+        $builder->select("C.descripcion AS 'comentario', CONCAT(CL.nombres,' ',CL.primerApellido, ' ',CL.segundoApellido) AS 'cliente', C.fechaCreacion AS 'fechaRegistro', CL.foto AS 'foto', U.idUsuario AS 'idUsuario', T.nombre AS 'taller', T.fotoPerfil AS 'fotoTaller', U.rol AS 'rol'");
         $builder->join("usuario U", "U.idUsuario = C.idUsuario", "inner");
-        $builder->join("cliente CL", "CL.idCliente = U.idUsuario", "inner");
+        $builder->join("cliente CL", "CL.idCliente = U.idUsuario", "left");
+        $builder->join("taller T", "T.idTaller = U.idUsuario", "left");
         $builder->where("C.idForo", $idForo);
         $builder->limit('2');
         $query = $builder->get();

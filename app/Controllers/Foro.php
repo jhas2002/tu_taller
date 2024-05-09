@@ -42,10 +42,18 @@ class Foro extends BaseController
         $dataPregunta = $foroModel->SelectPreguntaForo($idForo);
         foreach ($dataPregunta as $row) 
         {
-            $data['nombre'] = $row->nombre;
+            
             $data['pregunta'] = $row->pregunta;
-            $data['foto'] = $row->foto;
             $data['idUsuario'] = $row->idUsuario;
+            if ($row->rol == '2') {
+                $data['foto'] = $row->foto;
+                $data['nombre'] = $row->cliente;
+            }
+            else{
+                $data['foto'] = $row->fotoTaller;
+                $data['nombre'] = $row->taller;
+            }
+            
         }
         $data['respuestas'] = $foroModel->SelectRespuestas($idForo);
 
@@ -72,7 +80,7 @@ class Foro extends BaseController
     public function registrarPregunta()
     {
         $session = session();
-        if ($session->get('rol') == '2') 
+        if ($session->get('rol') == '2' || $session->get('rol') == '3') 
         {
             $pregunta = $this->request->getPost('txtPregunta');
             $idUsuario = $session->get('id');

@@ -27,6 +27,35 @@
 			$session = session();
 			if ($session->has("rol")) 
 			{
+				if ($session->get('rol') == '1') 
+				{
+			?>
+					<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-nav" >
+						<a class="navbar-brand" href="<?php echo base_url('public/') ?>" width="auto">
+							<img src="<?php echo base_url('sources/images/logo.png') ?>" alt="Tu Taller logo" class="logo">
+						</a>
+						<button type="button" class="navbar-toggler mb-1 me-4  btn-light" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					    	<span class="navbar-toggler-icon btn-light"></span>
+					    </button>
+						<div class="collapse navbar-collapse" id="navbarCollapse">
+							<div class="navbar-nav ms-auto me-4">
+								<a href="<?php echo base_url('public/admin/listaUsuarios')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">USUARIOS</button>
+				                </a>
+								
+				                <div class="nav-item dropdown">
+									<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>
+									<div class="dropdown-menu fade-down bg-select">
+										<a href="<?php echo base_url('public/cliente/perfilcliente') ?>" class="dropdown-item">Perfil</a>
+										<a href="<?php echo base_url('public/usuario/logout') ?>" class="dropdown-item">Cerrar Sesión</a>
+									</div>
+								</div>
+				            </div>
+						</div>
+					</nav>
+
+			<?php
+				}
 				if ($session->get('rol') == '2') 
 				{
 			?>
@@ -45,7 +74,7 @@
 								<a href="<?php echo base_url('public/cotizacion/listacotizacioncliente')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">COTIZACIÓN</button>
 				                </a>
-				                <a href="<?php echo base_url('public/docente/listadocentes')?>" class="eliminar-subrayado nav-item nav-link">
+				                <a href="<?php echo base_url('public/cita/listaCitaCliente')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">AGENDAR</button>
 				                </a>
 				                <a href="<?php echo base_url('public/ayuda/mapaayuda')?>" class="eliminar-subrayado nav-item nav-link">
@@ -95,6 +124,9 @@
 				                </a>
 				                <a href="<?php echo base_url('public/reporte/reportes')?>" class="eliminar-subrayado nav-item nav-link">
 				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">REPORTES</button>
+				                </a>
+				                <a href="<?php echo base_url('public/foro/listaforo')?>" class="eliminar-subrayado nav-item nav-link">
+				                	<button type="submit" class="btn btn-light rounded-pill btn-head font-monserrat-bold">FORO</button>
 				                </a>
 				                <div class="nav-item dropdown">
 									<a href="#" class="text-dark nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="<?php if($session->get('foto') == '1'){echo base_url('sources/images/usuario').'/'.$session->get('id').'.jpg';}else{echo base_url('sources/images/usuario/0.png');} ?>" class="btn-outline-light p-0 m-0 rounded-circle" width="50px"><span class="text-dark"><?php echo $session->get('nombre')?></span></a>

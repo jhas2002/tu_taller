@@ -54,6 +54,14 @@ class Usuario extends BaseController
                     }
                     else 
                     {
+                        if ($row->rol == 1) 
+                        {
+                            $nombre = 'Admin';
+                            $session->set('nombre', $nombre);
+                            $session->set('foto', 0);
+                            $session->set('id', $row->idUsuario);
+                            $session->set('rol', 1);   
+                        }
                         if ($row->rol == 2) 
                         {
                             $clienteModel = new ClienteModel();
@@ -92,7 +100,7 @@ class Usuario extends BaseController
                 }
                 if($session->get('rol') == '1')
                 {
-                    $url = base_url('public/curso/listaCursosAdmin');
+                    $url = base_url('public/');
                     return redirect()->to($url);
                 }
                 if ($session->get('rol') == '2') 

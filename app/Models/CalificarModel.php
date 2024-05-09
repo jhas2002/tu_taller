@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CAlificarModel extends Model
+class CalificarModel extends Model
 {
 	
 

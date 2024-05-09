@@ -85,18 +85,21 @@
         <h5 id="staticBackdropLabel">Solicitar Cita</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form id="citaform" action="<?php echo base_url('public/cita/solicitarcita') ?>" target="_self" method="post">
+      <form id="citaform" action="<?php echo base_url('public/cita/solicitarcita') ?>" target="_self" method="post" >
       	<div class="modal-body">
 	      	<input type="text" name="id" value="<?php echo $idTaller?>" hidden>
 	      	<div class="form-group">
 	      		<label>Servicios</label>
-	      		<select name="selecServicio" id="selecServicio" class="form-select rounded-pill">
-	      			<option selected disabled value="">Seleccione un Servicio</option>
+	      		<select name="selecServicio" id="selecServicioCita" class="form-select rounded-pill" required>
+	      			<option selected disabled value="1">Seleccione un Servicio</option>
 	      			<?php
 	      			foreach($servicios as $row){
 	      			?>
 	      			<option ><?php echo $row->descripcion; }?></option>
-					</select>
+				</select>
+				<div class="text-danger" id="feedback2" hidden>
+	      			Este campo es obligatorio
+	      		</div>
 	      	</div>
 	      	<div class="form-group">
 	      		<label class="font-monserrat-regular">Seleccione un dia de preferencia</label>
@@ -107,7 +110,7 @@
 	      	</div>
 	      	<div class="form-group">
 	      		<label class="font-monserrat-regular">descripcion problema</label>
-	      		<textarea class="form-control form-control" name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion" rows="5" ></textarea>
+	      		<textarea class="form-control form-control" name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion" rows="5" required></textarea>
 	      	</div>
 	      </div>
 	      <div class="modal-footer">
@@ -121,7 +124,6 @@
 </div>
 
 <!-- Modal Solicitar cotizacion-->
-<!-- Modal Solicitar Cita-->
 <div class="modal fade" id="mdSolicitarCotizacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -129,22 +131,35 @@
         <h5 id="staticBackdropLabel">Solicitar Cotización</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form id="citaform" action="<?php echo base_url('public/cotizacion/solicitarcotizacion') ?>" target="_self" method="post">
+      <form id="citaform" action="<?php echo base_url('public/cotizacion/solicitarcotizacion') ?>" target="_self" method="post" class="needs-validation" novalidate>
       	<div class="modal-body">
 	      	<input type="text" name="id" value="<?php echo $idTaller?>" hidden>
 	      	<div class="form-group">
 	      		<label>Seleccione el Servicio que quiere cotizar</label>
-	      		<select name="selecServicio" id="selecServicio" class="form-select rounded-pill">
+	      		<select name="selecServicio" id="selecServicio" class="form-select rounded-pill" required>
 	      			<option selected disabled value="">Seleccione un Servicio</option>
 	      			<?php
 	      			foreach($servicios as $row){
 	      			?>
 	      			<option ><?php echo $row->descripcion; }?></option>
-					</select>
+				</select>
+				<div class="valid-feedback">
+	              Correcto.
+	            </div>
+	            <div class="invalid-feedback">
+	              Debe seleccionar un servicio
+	            </div>
 	      	</div>
+
 	      	<div class="form-group">
 	      		<label>Describa su problema</label>
-	      		<textarea class="form-control form-control" name="txtDescripcionProblema" id="txtDescripcionProblema" placeholder="Descripcion" rows="5" ></textarea>
+	      		<textarea class="form-control form-control" name="txtDescripcionProblema" id="txtDescripcionProblema" placeholder="Descripcion" rows="5" required></textarea>
+	      		<div class="valid-feedback">
+	              Correcto.
+	            </div>
+	            <div class="invalid-feedback">
+	              Este campo es obligatorio
+	            </div>
 	      	</div>
 	      </div>
 	      <div class="modal-footer">
@@ -163,6 +178,7 @@
 		var horario = document.getElementById('pHorario').textContent;
 		var horarioLineas = horario.split("\n");
 		var verficador = '0';
+		var selec = document.getElementById('selecServicioCita').value;
 
 		var fechaComoCadena = document.getElementById('fechaPreferida').value;
 		var diasLiteral = [
@@ -186,15 +202,41 @@
 				verficador = '1';
 			}
 		}
-		if (verficador == '1') 
+		if (verficador != '1') 
+		{
+			document.getElementById("feedback").hidden = false;
+		}
+		if (selec =='1') 
+		{
+			document.getElementById("feedback2").hidden = false;
+		}
+		else
+		{
+			document.getElementById("feedback2").hidden = true;
+		}
+		if (verficador == '1' && selec !='1') 
 		{
 			document.getElementById("citaform").submit();
 			
 		}
-		else
-		{
-			document.getElementById("feedback").hidden = false;
-		}
        
     }
+</script>
+<script type="text/javascript">
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 </script>

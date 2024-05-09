@@ -102,6 +102,12 @@
 											<button id="" class=" border-0 btn-success" type="button" onclick="mostrarPassword()"><span class="bi bi-eye-slash-fill icon"></span> 
 								      	</button>
 										</span>
+										<div class="valid-feedback">
+									     	Correcto.
+									    </div>
+									    <div class="invalid-feedback">
+									       	La contraseña debe tener 8 caracteres minimo
+									    </div>
 									</div>
 									<div id="strengthMessage"></div>
 									<div class="valid-feedback">

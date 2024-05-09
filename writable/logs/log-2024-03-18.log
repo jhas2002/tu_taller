@@ -1,0 +1,20 @@
+CRITICAL - 2024-03-18 15:57:33 --> Undefined property: stdClass::$cliente
+in APPPATH\Views\cita\listaCitasClienteView.php on line 36.
+ 1 APPPATH\Views\cita\listaCitasClienteView.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$cliente', 'APPPATH\\Views\\cita\\listaCitasClienteView.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cita\\listaCitasClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasClienteView', [], true)
+ 5 APPPATH\Controllers\Cita.php(73): view('cita/listaCitasClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-18 16:06:57 --> Unmatched '}'
+in APPPATH\Views\cita\listaCitasClienteView.php on line 43.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cita/listaCitasClienteView', [], true)
+ 3 APPPATH\Controllers\Cita.php(73): view('cita/listaCitasClienteView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cita->listaCitaCliente()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cita))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

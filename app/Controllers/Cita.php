@@ -58,6 +58,21 @@ class Cita extends BaseController
         echo view('cita/listaCitasView', $data);
         echo view('master/footer');
     }
+    public function listaCitaCliente()
+    {
+        $session = session();
+        $idUsuario = $session->get('id');
+        $messageReport = session('messageReport');
+
+        $cita = new CitaModel();
+        
+        $data['citas'] = $cita->SelectCitasCliente($idUsuario);
+        $data['messageReport'] = $messageReport; 
+        $data['id'] = $idUsuario;
+        echo view('master/header');
+        echo view('cita/listaCitasClienteView', $data);
+        echo view('master/footer');
+    }
     public function finalizarCita()
     {
         $idCita = $this->request->getPost('idCita');

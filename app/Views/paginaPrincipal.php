@@ -100,10 +100,30 @@
 									  			<div class="container-fluid p-0">
 											  		<div class="row align-items-center p-0">
 												  		<div class="col-md-2">
-												  			<img src="<?php if($row2->foto == 0){echo base_url('sources/images/usuario/0.png');} else{echo base_url('sources/images/usuario').'/'.$row2->idUsuario.'.jpg';} ?>" width="50px" class="rounded-circle">
+												  			<?php
+												  			if ($row2->rol == '2') {?>
+																<img src="<?php if($row2->foto == 0){echo base_url('sources/images/usuario/0.png');} else{echo base_url('sources/images/usuario').'/'.$row2->idUsuario.'.jpg';} ?>" width="50px" class="rounded-circle">
+															  <?php
+															  }
+															if ($row2->rol == '3') {?>
+																<img src="<?php if($row2->fotoTaller == 0){echo base_url('sources/images/usuario/fotoUsuario.png');} else{echo base_url('sources/images/usuario').'/'.$row2->idUsuario.'.jpg';} ?>" class="img-tamaño-foro2">
+																<?php
+															}
+															?>
+												  			
 												  		</div>
 												  		<div class="col-md-10 ps-3">
-												  			<h5 class="card-text text-center"><?php echo $row2->nombre ?>:</h5>
+												  			<?php
+												  			if ($row2->rol == '2') {?>
+																<h5 class="card-text text-center"><?php echo $row2->cliente ?>:</h5>
+															  <?php
+															  }
+															if ($row2->rol == '3') {?>
+																<h5 class="card-text text-center"><?php echo $row2->taller ?>:</h5>
+																<?php
+															}
+															?>
+												  			
 												  		</div>
 												  	</div>
 												  	<div class="row pt-1">

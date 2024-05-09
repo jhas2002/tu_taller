@@ -1,0 +1,113 @@
+CRITICAL - 2024-05-02 19:30:28 --> Undefined variable $nombre
+in APPPATH\Views\cliente\perfilClienteView.php on line 28.
+ 1 APPPATH\Views\cliente\perfilClienteView.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\cliente\\perfilClienteView.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\cliente\\perfilClienteView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cliente/perfilClienteView', [], true)
+ 5 APPPATH\Controllers\Cliente.php(149): view('cliente/perfilClienteView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cliente->perfilCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cliente))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:05:07 --> Invalid file: admin/listaAdminView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/listaAdminView.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaAdminView', [], true)
+ 3 APPPATH\Controllers\Admin.php(23): view('admin/listaAdminView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:32:35 --> Undefined variable $talleres
+in APPPATH\Views\Admin\listaUsuariosView.php on line 13.
+ 1 APPPATH\Views\Admin\listaUsuariosView.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $talleres', 'APPPATH\\Views\\Admin\\listaUsuariosView.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\listaUsuariosView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:32:57 --> Undefined property: stdClass::$nombre
+in APPPATH\Views\Admin\listaUsuariosView.php on line 18.
+ 1 APPPATH\Views\Admin\listaUsuariosView.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nombre', 'APPPATH\\Views\\Admin\\listaUsuariosView.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\listaUsuariosView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:35:35 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\Admin\listaUsuariosView.php on line 21.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 3 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:35:51 --> Undefined property: stdClass::$fotoPerfil
+in APPPATH\Views\Admin\listaUsuariosView.php on line 24.
+ 1 APPPATH\Views\Admin\listaUsuariosView.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$fotoPerfil', 'APPPATH\\Views\\Admin\\listaUsuariosView.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\listaUsuariosView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:42:10 --> Undefined property: stdClass::$calificacion
+in APPPATH\Views\Admin\listaUsuariosView.php on line 43.
+ 1 APPPATH\Views\Admin\listaUsuariosView.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$calificacion', 'APPPATH\\Views\\Admin\\listaUsuariosView.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\listaUsuariosView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:50:48 --> syntax error, unexpected floating-point number ".1"
+in APPPATH\Models\AdminModel.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\AdminModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminModel')
+ 3 APPPATH\Controllers\Admin.php(18): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminModel')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 20:51:32 --> Unclosed '{' on line 20
+in APPPATH\Models\AdminModel.php on line 30.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\AdminModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\AdminModel')
+ 3 APPPATH\Controllers\Admin.php(18): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\AdminModel')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 21:09:15 --> Undefined property: stdClass::$idTaller
+in APPPATH\Views\Admin\listaUsuariosView.php on line 45.
+ 1 APPPATH\Views\Admin\listaUsuariosView.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$idTaller', 'APPPATH\\Views\\Admin\\listaUsuariosView.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\listaUsuariosView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-02 21:15:02 --> Undefined variable $id
+in APPPATH\Views\Admin\listaUsuariosView.php on line 65.
+ 1 APPPATH\Views\Admin\listaUsuariosView.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Views\\Admin\\listaUsuariosView.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Admin\\listaUsuariosView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('admin/listaUsuariosView', [], true)
+ 5 APPPATH\Controllers\Admin.php(23): view('admin/listaUsuariosView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Admin->listaUsuarios()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

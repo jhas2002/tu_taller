@@ -38,6 +38,21 @@
   background: rgba(0,0,0,.6)!important;
   height: 100%;
 }
+/*Fondo para lista usuarios*/
+.fondoUsuarios{
+  /*margin-top: 50px;*/
+  background: url(../images/fondos/fondoAdmin.jpg);
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-repeat:no-repeat; /* No se repetira */
+  background-size:cover; /* Imagen al 100% del ancho */
+  background-attachment: fixed; /* Posicion fija para la imagen */
+}
+.fondoUsuarios .cont{
+  background: rgba(0,0,0,.6)!important;
+  height: 100%;
+}
 .fondoForo{
   /*margin-top: 50px;*/
   background: url(../images/fondos/fondoForo.jpg);
@@ -84,9 +99,19 @@
 	background: linear-gradient(to right, #003E5F 0%, #107FC9 40%,#107FC9 50%,#107FC9 60%,#003E5F 100%)!important;
 	color: #fff!important;
 }
+
 .btn-bg:hover{
 	background: linear-gradient(to right, #107FC9 0%, #23B0DB 40%,#23B0DB 50%,#23B0DB 60%,#107FC9 100%)!important;
 	color: #fff!important;
+}
+/*Botones admin rojos*/
+.btn-bga{
+  background: linear-gradient(to right, #B20C0C 0%, #EF2C2C 40%,#FF2727 50%,#EF2C2C 60%,#B20C0C 100%)!important;
+  color: #fff!important;
+}
+.btn-bga:hover{
+  background: linear-gradient(to right, #FF2D2D 0%, #FC4343 40%,#FF6464 50%,#FC4343 60%,#FF2D2D 100%)!important;
+  color: #fff!important;
 }
 .btn-bg-login{
 	background-color: #23B0DB!important;

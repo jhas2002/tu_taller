@@ -1,0 +1,61 @@
+ERROR - 2024-05-03 16:04:23 --> mysqli_sql_exception: Duplicate entry '5-1' for key 'horario.PRIMARY' in C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tu_taller\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ho...', 0)
+#1 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 C:\xampp\htdocs\tu_taller\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 C:\xampp\htdocs\tu_taller\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 C:\xampp\htdocs\tu_taller\app\Models\TallerModel.php(115): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\tu_taller\app\Controllers\Taller.php(211): App\Models\TallerModel->InsertHorario('5', '1', '09:00', '15:00')
+#6 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(904): App\Controllers\Taller->agregarHorarioModal()
+#7 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+#8 C:\xampp\htdocs\tu_taller\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tu_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 16:04:23 --> Duplicate entry '5-1' for key 'horario.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `horario` (`idTaller`, `idDia`, `horaInicio`, `horaFin`) VALUES (\'5\', \'1\', \'09:00\', \'15:00\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `horario` (`idTaller`, `idDia`, `horaInicio`, `horaFin`) VALUES (\'5\', \'1\', \'09:00\', \'15:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `horario` (`idTaller`, `idDia`, `horaInicio`, `horaFin`) VALUES (\'5\', \'1\', \'09:00\', \'15:00\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `horario` (`idTaller`, `idDia`, `horaInicio`, `horaFin`) VALUES (:idTaller:, :idDia:, :horaInicio:, :horaFin:)', [...], false)
+ 5 APPPATH\Models\TallerModel.php(115): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Taller.php(211): App\Models\TallerModel->InsertHorario('5', '1', '09:00', '15:00')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Taller->agregarHorarioModal()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Taller))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 16:20:54 --> Unclosed '{' on line 27
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 160.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 3 APPPATH\Controllers\Cotizacion.php(128): view('cotizacion/listaCotizacionClienteView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 16:21:49 --> Unclosed '{' on line 27
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 160.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 3 APPPATH\Controllers\Cotizacion.php(128): view('cotizacion/listaCotizacionClienteView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 16:21:57 --> Unclosed '{' on line 27
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 160.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 3 APPPATH\Controllers\Cotizacion.php(128): view('cotizacion/listaCotizacionClienteView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 16:21:58 --> Unclosed '{' on line 27
+in APPPATH\Views\cotizacion\listaCotizacionClienteView.php on line 160.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('cotizacion/listaCotizacionClienteView', [], true)
+ 3 APPPATH\Controllers\Cotizacion.php(128): view('cotizacion/listaCotizacionClienteView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Cotizacion->listaCotizacionCliente()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cotizacion))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

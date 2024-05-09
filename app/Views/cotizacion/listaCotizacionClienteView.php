@@ -33,8 +33,18 @@
 								<td>
 									<form action="<?php echo base_url('public/cotizacion/clientecotizacionpdf') ?>" target="_blanck" method="post">
 										<input type="text" name="idCotizacion" value="<?php echo $row->idCotizacion ?>" hidden>
-										<button id="btnAceptar" class="btn btn-success rounded-pill" type="submit"> 	<span class="bi bi-check-square icon"></span>
+										<?php  
+											if ($row->costo != '') {?>
+												<button id="btnAceptar" class="btn btn-success rounded-pill" type="submit"> 	<span class="bi bi-check-square icon"></span>
+							    				</button>
+							    				<?php
+											}
+											else
+											{
+										?>
+										<button id="btnAceptar" class="btn btn-success rounded-pill" type="submit" disabled="true"> 	<span class="bi bi-check-square icon"></span>
 							    		</button>
+											<?php } ?>
 									</form></td>
 								
 								

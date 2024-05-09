@@ -56,6 +56,24 @@ class CitaModel extends Model
      * ---
      * Select
      * ---
+     * Retorna todas las citas de un cliente
+     * 
+     * 
+     */
+    public function SelectCitasCliente($idCliente)
+    {
+        $builder = $this->db->table('cita C');
+        $builder->select("C.descripcion AS 'descripcionProblema', C.fechaCita AS 'fechaCita', C.estado AS 'estado', S.descripcion AS 'servicio', T.nombre AS 'taller', C.idCita AS 'idCita'");
+        $builder->join("servicio S","S.idServicio = C.idServicio", "inner");
+        $builder->join("taller T", "T.idTaller = C.idTaller", "inner");
+        $builder->where('C.idCliente',$idCliente);
+        $query = $builder->get();
+        return $query->getResult();
+    }
+    /**
+     * ---
+     * Select
+     * ---
      * Retorna todas las citas de un taller
      * 
      * 

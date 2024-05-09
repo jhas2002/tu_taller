@@ -211,7 +211,7 @@ if ($messageReport=='4') {
 <?php
 }
 ?>
-?>
+
 
 <script type="text/javascript">
 	function finalizarCita(cita) 

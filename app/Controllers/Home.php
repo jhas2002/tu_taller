@@ -16,13 +16,26 @@ class Home extends BaseController
         $dataPreguntas = $foroModel->SelectPreguntasForoMain();
         foreach ($dataPreguntas as $row) {
             $respuestas = $foroModel->SelectRespuestasMain($row->idForo);
-            $pregunta = [
+            if ($row->rol == '2') {
+                $pregunta = [
                 'pregunta' => $row->pregunta,
-                'nombre' => $row->nombre,
+                'nombre' => $row->cliente,
                 'foto' => $row->foto,
                 'idUsuario' => $row->idUsuario,
                 'respuestas' => $respuestas
             ];
+            }
+            if($row->rol == '3')
+            {
+                $pregunta = [
+                'pregunta' => $row->pregunta,
+                'nombre' => $row->taller,
+                'foto' => $row->fotoTaller,
+                'idUsuario' => $row->idUsuario,
+                'respuestas' => $respuestas
+            ];
+            }
+            
             array_push($list, $pregunta);
         }
         $data['foro']= $list;
