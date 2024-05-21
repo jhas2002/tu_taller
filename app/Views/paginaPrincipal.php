@@ -33,7 +33,7 @@
 		    			<div class="row justify-content-center">
 		    				<div class="col-sm-10 col-lg-8">
 		    					<h1 class="display-3 text-white font-bebas text-center">Tu Taller</h1>
-		    					<p class="fs-5 text-white mb-4 pb-2 font-monserrat-regular text-center">Es una pagina web que busca ayuda a proporcionar informacion de los talleres registrados en el area </p>
+		    					<p class="fs-5 text-white mb-4 pb-2 font-monserrat-regular text-center">Es una página web que tiene como objetivo ayudar proporcionando información sobre los talleres registrados en el área </p>
 		    				</div>
 		    			</div>
 		    		</div>

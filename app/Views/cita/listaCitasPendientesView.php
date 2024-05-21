@@ -14,8 +14,8 @@
 						</tr>
 						<tr>
 							<th class="col text-center">Nombre cliente</th>
-							<th class="col text-center">Descripcion</th>
-							<th class="col text-center">Servicio</th>
+							<th class="col text-center">Descripción </th>
+							<th class="col text-center">Servicio </th>
 							<th class="col text-center">Fecha Cita</th>
 							<th class="col text-center">Aceptar</th>
 							<th class="col text-center">Rechazar</th>
@@ -48,6 +48,28 @@
 		</div>
 	</div>
 </div>
+<!--Modal En Espera-->
+<div class="modal3 container-fluid" name="modalEspera" id="modalEspera" hidden="true">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-2">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+
+			    			<h5 class="fs-4 pt-3 pb-1">EN PROCESO</h5>
+			    		</div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4 pt-4 pb-4">
+					    		<div class="spinner"></div>
+					    		
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- Modal Confirmar Cita-->
 
 <div class="modal fade" id="mdAceptarCita" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -62,14 +84,14 @@
 	      	<input type="text" name="idCliente" id="idCliente" hidden>
 	      	<input type="text" name="idCita" id="idCita" hidden>
 	      	<div class="form-group">
-	      		<label>seleccione el dia de la cita</label>
+	      		<label>seleccione el día de la cita</label>
 	      		<input type="datetime-local" min="<?php echo date('Y-m-d h:i', time()); ?>" requiered name="fechaCita" class="form-control">
 	      	</div>
 	      	
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" >Guardar</button>
+	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" onclick="MostrarModal()">Guardar</button>
 	      </div>
       </form>
       
@@ -97,7 +119,7 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" >Guardar</button>
+	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" onclick="MostrarModal()" >Guardar</button>
 	      </div>
       </form>
       
@@ -106,20 +128,19 @@
 </div>
 
 
+
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CITA EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">La cita se programó correctamente </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se acepto la cita de manera exitosa</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -137,15 +158,12 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Hubo un error al aceptar la cita intentelo otra vez</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -163,15 +181,12 @@ if ($messageReport=='3') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CITA RECHAZADA CON EXITO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">La cita fue rechazada exitosamente </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se rechazo la cita correctamente </p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -189,15 +204,12 @@ if ($messageReport=='4') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Hubo un error al rechazar la cita intentelo otra vez</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -223,5 +235,12 @@ if ($messageReport=='4') {
 	{
         document.getElementById("idCitaR").value = cita;
         document.getElementById("idClienteR").value = cliente;
+    }
+    function MostrarModal()
+    {
+    	document.getElementById("modalEspera").hidden = false;
+    	//document.getElementById("mdRealizarCotizacion").hidden = true;
+    	$('#mdAceptarCita').modal('hide');
+    	$('#mdRechazarCita').modal('hide');
     }
 </script>

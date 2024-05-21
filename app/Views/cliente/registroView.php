@@ -146,7 +146,7 @@
 														
 						<div class="row pt-4 pb-4">
 							<div class="col-md-12 text-center">
-								<button type="submit" class="btn btn-bg rounded-pill btn-lg" id="btnRegistrarse" style="background: " >REGISTRARSE</button>
+								<button type="submit" class="btn btn-bg rounded-pill btn-lg" id="btnRegistrarse" >REGISTRARSE</button>
 							</div>
 						</div>
 					</form>
@@ -155,19 +155,43 @@
 		</div>
 	</div>
 </div>
+<!--Modal En Espera-->
+<div class="modal3 container-fluid" name="modalEspera" id="modalEspera" hidden="true">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-2">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+
+			    			<h5 class="fs-4 pt-3 pb-1">EN PROCESO</h5>
+			    		</div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4 pt-4 pb-4">
+					    		<div class="spinner"></div>
+					    		
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">REGISTRO EXITOSO</h5>
+			    			<h5 class="fs-2 pt-3 pb-1">Se registró con éxito </h5>
 			    		</div>
 					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Su cuenta a sido creada de manera exitosa, para iniciar sesion debe verificar su correo electronico, se le envio un correo para poder completar con su registro.</p>
+					    	<p class="fs-5 font-monserrat-regular pt-2">Su cuenta ha sido creada de manera exitosa, para iniciar sesión debe verificar su correo electrónico, se le envió un correo para poder completar con su registro</p>
 					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
@@ -186,15 +210,13 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Ya existe una cuenta registrada con el mismo correo electrónico </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Ya existe una cuenta registrada con el mismo correo electornico.</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -209,6 +231,8 @@ if ($messageReport=='2') {
 <?php
 }
 ?>
+
+
 <script type="text/javascript">
     function readFile(input) {
         if (input.files && input.files[0]) {
@@ -243,7 +267,10 @@ if ($messageReport=='2') {
           event.preventDefault()
           event.stopPropagation()
         }
-
+        else
+        {
+        	document.getElementById("modalEspera").hidden = false;
+        }
         form.classList.add('was-validated')
       }, false)
     })
@@ -272,6 +299,12 @@ function submitUserForm() {
 			document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">Este campo es obligatorio</span>';
 			return false;
 	}*/
+
 	return true;
 }
+function MostrarModal()
+    {
+    	document.getElementById("modalEspera").hidden = false;
+    }
+
 </script>

@@ -25,8 +25,8 @@ date_default_timezone_set('America/La_Paz');
 	<h1 style="font-family: 'Bebas Neue', cursive; font-size: 35px; position: absolute; left:45%; ">TU TALLER</h1>
 	<img src="<?php echo base_url('sources/images/logo.jpg') ?>" alt="ITC logo" style="width: 150px;">
 	<h2 style="font-family: 'Bebas Neue', cursive; margin-left: 20px;">Reporte:</h2>
-	<p style="font-family: 'Montserrat', sans-serif; margin-left: 25px;"><strong>Reporte generado por: </strong> <?php echo $session->get('nombre'); ?></p>
-	<p style="font-family: 'Montserrat', sans-serif; margin-left: 25px;"><strong>Fecha en que se genero: </strong> <?php echo date('Y-m-d h:i:s a', time()); ?></p>
+	<p style="font-family: 'Montserrat', sans-serif; margin-left: 25px;"><strong>Reporte generado por : </strong> <?php echo $session->get('nombre'); ?></p>
+	<p style="font-family: 'Montserrat', sans-serif; margin-left: 25px;"><strong>Fecha en que se generó: </strong> <?php echo date('Y-m-d h:i:s a', time()); ?></p>
 	<p style="font-family: 'Montserrat', sans-serif; margin-left: 25px;"><strong>Reporte generado de: </strong> <?php echo $fechaInicio.' hasta '.$fechaFinal ?></p>
 	<h2 style="font-family: 'Bebas Neue', cursive; margin-left: 20px;">Detalle:</h2>
 	<p style="font-family: 'Montserrat', sans-serif; margin-left: 25px;">

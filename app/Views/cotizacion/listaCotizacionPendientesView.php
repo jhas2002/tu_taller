@@ -3,7 +3,7 @@
 		<div class="container pt-5 pb-5">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h1 class="font-bebas text-dark">COTIZACIÓN PENDIENTES</h1>
+					<h1 class="font-bebas text-dark">COTIZACIONES PENDIENTES</h1>
 				</div>
 			</div>
 			<div class="row">
@@ -14,7 +14,7 @@
 						</tr>
 						<tr>
 							<th class="col text-center">Nombre cliente</th>
-							<th class="col text-center">Descripcion</th>
+							<th class="col text-center">Descripción</th>
 							<th class="col text-center">Servicio</th>
 							<th class="col text-center">Aceptar</th>
 							
@@ -42,13 +42,35 @@
 		</div>
 	</div>
 </div>
+<!--Modal En Espera-->
+<div class="modal3 container-fluid" name="modalEspera" id="modalEspera" hidden="true">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-2">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+
+			    			<h5 class="fs-4 pt-3 pb-1">EN PROCESO</h5>
+			    		</div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4 pt-4 pb-4">
+					    		<div class="spinner"></div>
+					    		
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 <!-- Modal Confirmar Cita-->
 
 <div class="modal fade" id="mdRealizarCotizacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 id="staticBackdropLabel">Realizar Cotizacion</h5>
+        <h5 id="staticBackdropLabel">Realizar Cotización</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="<?php echo base_url('public/cotizacion/realizarcotizacion') ?>" target="_self" method="post">
@@ -70,10 +92,9 @@
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" >Guardar</button>
+	        <button type="submit" class="btn btn-success" id="btnGuardarPsw" onclick="MostrarModal()">Guardar</button>
 	      </div>
       </form>
-      
     </div>
   </div>
 </div>
@@ -85,15 +106,13 @@ if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">COTIZACIÓN EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">La cotización se realizó de manera correcta </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se envio la cotización con exito</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -111,19 +130,16 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Hubo un error al registrar la cotizacion intentelo otra vez</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
-					    		<a href="<?php echo base_url('public/taller/listacotizacionpentientetaller')?>"><img src="<?php echo base_url('sources/images/fail.png') ?>" class="align-items-center text-center" alt="fail logo" style="width: 100px;"></a>
+					    		<a href="<?php echo base_url('public/cotizacion/listacotizacionpendientetaller')?>"><img src="<?php echo base_url('sources/images/fail.png') ?>" class="align-items-center text-center" alt="fail logo" style="width: 100px;"></a>
 					    	</div>
 					    </div>
 				    </div>
@@ -135,10 +151,18 @@ if ($messageReport=='2') {
 }
 ?>
 
+
+
 <script type="text/javascript">
 	function realizarCotizacion(cotizacion, cliente) 
 	{
         document.getElementById("idCotizacion").value = cotizacion;
         document.getElementById("idCliente").value = cliente;
+    }
+    function MostrarModal()
+    {
+    	document.getElementById("modalEspera").hidden = false;
+    	//document.getElementById("mdRealizarCotizacion").hidden = true;
+    	$('#mdRealizarCotizacion').modal('hide');
     }
 </script>

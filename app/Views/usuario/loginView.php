@@ -53,19 +53,49 @@
 	</div>
 </div>
 
+
+
+
+
 <?php
 if ($messageReport=='3') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">VERIFICACIÓN EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Verificación de correo electrónico completada</h5>
 			    		</div>
 					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Su cuenta a sido activada de manera exitosa, ya puede iniciar sesión</p>
+					    </div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4">
+					    		<a href="<?php echo base_url('public/usuario/login')?>"><img src="<?php echo base_url('sources/images/done.png') ?>" class="align-items-center text-center" alt="ok logo" style="width: 100px;"></a>
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php
+}
+
+if ($messageReport=='0') {
+	?>
+	<div class="modal2 container-fluid">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-4">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    		</div>
+					    <div class="text-center">
+					    	<p class="fs-4 pt-2">Su cuenta fue bloqueada por incumplir las reglas.</p>
 					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
@@ -85,14 +115,13 @@ if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">FALLO EN INICIO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Correo o contraseña erroneos</h5>
 			    		</div>
 					    <div class="text-center">
-					    	<p class="fs-4 pt-2">No existe una cuenta con los credenciales proporcionados intentalo de nuevo</p>
 					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
@@ -112,14 +141,13 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CAMBIO EXITOSO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Contraseña actualizada correctamente</h5>
 			    		</div>
 					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Su contraseña se actualizo de manera exitosa, ya puede iniciar sesión</p>
 					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
@@ -139,14 +167,13 @@ if ($messageReport=='4') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ENVIO CON EXITO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Revisa tu bandeja de entrada para obtener un enlace para restablecer tu contraseña.</h5>
 			    		</div>
 					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Se le envio un correo electronico para que pueda recuperar su contraseña</p>
 					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
@@ -162,4 +189,5 @@ if ($messageReport=='4') {
 <?php
 }
 ?>
+
 <script src="<?php echo base_url('sources/js/passwordMostrar.js') ?>"></script>

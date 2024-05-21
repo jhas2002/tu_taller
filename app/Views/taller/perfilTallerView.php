@@ -381,20 +381,18 @@
 </div>
 
 
+
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CAMBIO EXITOSO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">La cuenta se actualizó de manera exitosa</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">La cuenta se actualizo de manera exitosa</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -412,15 +410,13 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Su contraseña actual no coincide</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">La contraseña actual no es correcta</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -438,15 +434,13 @@ if ($messageReport=='3') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CAMBIO EXITOSO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Contraseña actualizada correctamente</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">La contraseña se cambio con exito</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -465,15 +459,12 @@ if ($messageReport=='4') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CAMBIO EXITOSO</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Su foto se actualizó con éxito</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">La foto fue cambiada con exito</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -492,15 +483,13 @@ if ($messageReport=='5') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">EXITO AL AGREGAR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Se agregó una nueva hora con éxito</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se agrego una nueva hora con exito</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -519,15 +508,12 @@ if ($messageReport=='6') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">FALLO AL AGREGAR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">No se pudo agregar un nuevo dia intentelo otra vez</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -546,15 +532,12 @@ if ($messageReport=='7') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">EXITO AL ELIMINAR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Se eliminó el día con éxito</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se elimino el dia con exito</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -573,15 +556,12 @@ if ($messageReport=='8') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">FALLO AL ELIMINAR UN DIA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">No se pudo eliminar el dia seleccionado intentelo otra vez</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -600,15 +580,12 @@ if ($messageReport=='9') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">EXITO AL EDITAR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Se editó el día con éxito</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se edito el dia con exito</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -627,15 +604,12 @@ if ($messageReport=='10') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">FALLO AL EDITAR UN DIA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">No se pudo editar el dia seleccionado intentelo otra vez</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -650,6 +624,7 @@ if ($messageReport=='10') {
 <?php
 }
 ?>
+
 <script type="text/javascript">
 	function comparar() 
 	{

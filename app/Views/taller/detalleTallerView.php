@@ -15,8 +15,8 @@
 						<h4 class="font-bebas sb-t-verde">DATOS TALLER</h4>
 						<p class="font-monserrat-regular text-negrita">
 							Nombre: <?php echo $nombre ?> <br>
-							Numero Telefono: <?php echo $telefono ?> <br>
-							Direccón: <?php echo $direccion ?> <br>
+							Numero Teléfono: <?php echo $telefono ?> <br>
+							Dirección: <?php echo $direccion ?> <br>
 							<a target="_blanck" href="https://maps.google.com/?q=<?php echo $latitud.','.$longitud;?>">VER EN MAPA</a>
 						</p>
 						<h4 class="font-bebas sb-t-verde">DESCRIPCIÓN</h4>
@@ -43,7 +43,7 @@
 								}
 							?>
 						</p>
-						<h4>DISPONIBILIDAD</h4>
+						<h4>HORARIO</h4>
 						<p id="pHorario">
 							<?php  
 								foreach ($horario as $row) {
@@ -63,10 +63,6 @@
 						<br>
 						<h4 class="font-bebas sb-t-verde">SOLICITAR COTIZACIÓN</h4>
 						<button type="button" class="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#mdSolicitarCotizacion">Cotizar</button>
-						<br>
-						<br>
-						<h4 class="font-bebas sb-t-verde">SOLICITAR AYUDA</h4>
-						<button type="button" class="btn btn-bg rounded-pill" data-bs-toggle="modal" data-bs-target="#mdAgregarDia">Solicitar ayuda</button>
 					</div>
 
 					
@@ -88,6 +84,16 @@
       <form id="citaform" action="<?php echo base_url('public/cita/solicitarcita') ?>" target="_self" method="post" >
       	<div class="modal-body">
 	      	<input type="text" name="id" value="<?php echo $idTaller?>" hidden>
+	      	<h5>Horario del taller</h5>
+	      	<p id="pHorario">
+	      		<?php  
+	      		foreach ($horario as $row) 
+	      		{
+	      			echo $row->dia.': '.$row->HoraInicio.' a '.$row->HoraFin;?> <br>
+	      			<?php 
+	      		}
+	      		?>
+	      	</p>
 	      	<div class="form-group">
 	      		<label>Servicios</label>
 	      		<select name="selecServicio" id="selecServicioCita" class="form-select rounded-pill" required>
@@ -101,15 +107,16 @@
 	      			Este campo es obligatorio
 	      		</div>
 	      	</div>
+	      	
 	      	<div class="form-group">
-	      		<label class="font-monserrat-regular">Seleccione un dia de preferencia</label>
+	      		<label class="font-monserrat-regular">Seleccione un día de preferencia</label>
 	      		<input type="datetime-local" name="fechaPreferida" id="fechaPreferida" class="form-control" min="<?php echo date('Y-m-d h:i', time()); ?>" value = "<?php echo date('Y-m-d h:i', time()); ?>">
 	      		<div class="text-danger" id="feedback" hidden>
 	      			El día y hora debe ser uno dentro del horario del taller.
 	      		</div>
 	      	</div>
 	      	<div class="form-group">
-	      		<label class="font-monserrat-regular">descripcion problema</label>
+	      		<label class="font-monserrat-regular">Descripción problema</label>
 	      		<textarea class="form-control form-control" name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion" rows="5" required></textarea>
 	      	</div>
 	      </div>

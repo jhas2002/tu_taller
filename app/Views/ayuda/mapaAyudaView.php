@@ -90,16 +90,15 @@ if ($lista[0]=='1') {
   ?>
   <div class="modal2 container-fluid">
     <div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-      <div class="col-md-6">
+      <div class="col-md-4">
           <div class="container bg-modal-message border-curvo">
             <div class="modal-content border-0">
               <div class="row text-center border-curvo-top2 bg-modal-titulo">
-                <h5 class="fs-1 pt-3 pb-1">REGISTRO EXITOSO</h5>
+                <h5 class="fs-3 pt-3 pb-1">Solicitud de ayuda realizada </h5>
               </div>
               <div class="text-center">
-                <p class="fs-4 pt-2">Se solicito ayuda con exito</p>
                 <a href="https://wa.me/591<?php echo $lista[4]?>?text=Buenas%20necesito%20ayuda%20en%20la%20siguiente%20ubicacion%20https://maps.google.com/?q=<?php echo $lista[3].','.$lista[2];?>" target="_blanck">
-                  <button class="btn btn-bg rounded-pill btn-lg"> Enviar al Wasap </button>
+                  <button class="btn btn-bg rounded-pill btn-lg mt-3"> Enviar al Wasap </button>
                 </a>
               </div>
               <div class="row text-center align-items-center">
@@ -119,15 +118,13 @@ if ($lista[0]=='2') {
   ?>
   <div class="modal2 container-fluid">
     <div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-      <div class="col-md-6">
+      <div class="col-md-4">
           <div class="container bg-modal-message border-curvo">
             <div class="modal-content border-0">
               <div class="row text-center border-curvo-top2 bg-modal-titulo">
-                <h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+                <h5 class="fs-3 pt-3 pb-1">No se pudo solicitar ayuda inténtelo otra vez</h5>
               </div>
-              <div class="text-center">
-                <p class="fs-4 font-monserrat-regular pt-2">Hubo un error al solicitar ayuda intentelo otra vez</p>
-              </div>
+
               <div class="row text-center align-items-center">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">

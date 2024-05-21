@@ -101,7 +101,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 id="staticBackdropLabel">Confirmar Calificacion</h5>
+        <h5 id="staticBackdropLabel">Confirmar Calificación</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="<?php echo base_url('public/calificar/registrarcalificacion') ?>" target="_self" method="post">
@@ -116,20 +116,21 @@
     </div>
   </div>
 </div>
+
+
+
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">SOLICITUD EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Su solicitud de cita ha sido enviada espere la confirmación en su correo electrónico</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Su cita ha sido enviada espere la confirmación en su correo electrónico</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -147,15 +148,12 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Hubo un error al solicitar su cita</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -173,15 +171,13 @@ if ($messageReport=='3') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">SOLICITUD DE COTIZACION EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Su solicitud de cotización fue enviada correctamente. Se le enviará una respuesta al correo</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Su solicitud para una cotización fue enviada correctamente se le enviara una respuesta al correo.</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -199,15 +195,13 @@ if ($messageReport=='4') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Hubo un error al solicitar su cotizacion</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -225,15 +219,13 @@ if ($messageReport=='5') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">CALIFICAÓN EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Su calificación fue exitosa. Gracias por calificar el taller</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Su calificación fue exitsa gracias por calificar un taller</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -251,15 +243,12 @@ if ($messageReport=='6') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Error inesperado inténtelo otra vez</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Hubo un error al calificar un taller intentelo otra vez por favor</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -274,6 +263,8 @@ if ($messageReport=='6') {
 <?php
 }
 ?>
+
+
 <script type="text/javascript">
 	function calificarTaller(taller, calificacion) 
 	{

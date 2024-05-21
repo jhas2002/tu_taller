@@ -61,7 +61,7 @@
 							
 							<div class="col-md-6">
 								<div class="form-group text-center">
-									<label>Telefono</label>
+									<label>Teléfono </label>
 									<input type="text" name="txtNumeroTelefono" id="txtNumeroTelefono" placeholder="77788899" class="form-control rounded-pill" required pattern="^[0-9]+$" minlength="8" maxlength="11">
 									<div class="valid-feedback">
 								     	Correcto.
@@ -220,7 +220,7 @@
 						<input type="txt" name="txtLongitud" id="txtLongitud">
 						<div class="row pt-4 pb-4">
 							<div class="col-md-12 text-center">
-								<button type="submit" class="btn btn-bg rounded-pill btn-lg" id="btnRegistrarse" style="background: " >REGISTRARSE</button>
+								<button type="submit" class="btn btn-bg rounded-pill btn-lg" id="btnRegistrarse" style="background: ">REGISTRARSE</button>
 							</div>
 						</div>
 					</form>
@@ -229,19 +229,45 @@
 		</div>
 	</div>
 </div>
+
+<!--Modal En Espera-->
+<div class="modal3 container-fluid" name="modalEspera" id="modalEspera" hidden="true">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-2">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+
+			    			<h5 class="fs-4 pt-3 pb-1">EN PROCESO</h5>
+			    		</div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4 pt-4 pb-4">
+					    		<div class="spinner"></div>
+					    		
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-5">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">REGISTRO EXITOSO</h5>
+			    			<h5 class="fs-1 pt-3 pb-1">Se registró con éxito</h5>
 			    		</div>
 					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Su cuenta a sido creada de manera exitosa, para iniciar sesion debe verificar su correo electronico, se le envio un correo para poder completar con su registro.</p>
+					    	<p class="fs-4 pt-2">Su cuenta ha sido creada exitosamente. Para iniciar sesión, por favor verifique su correo electrónico. Se le ha enviado un correo electrónico para completar su registro</p>
 					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
@@ -260,15 +286,12 @@ if ($messageReport=='2') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ERROR</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Ya existe una cuenta registrada con el mismo correo electrónico</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">Ya existe una cuenta registrada con el mismo correo electornico.</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -316,6 +339,10 @@ if ($messageReport=='2') {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
+        }
+        else
+        {
+        	document.getElementById("modalEspera").hidden = false;
         }
 
         form.classList.add('was-validated')

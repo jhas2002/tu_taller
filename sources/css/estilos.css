@@ -82,7 +82,33 @@
 	background: #CCCCCC;
 }
 /*LOGIN FIN*/
+/*Espera INICIO*/
+.spinner {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  animation: s4 4s infinite;
+}
+.spinner::before,
+.spinner::after {    
+  content: "";
+  grid-area: 1/1;
+  border: 8px solid;
+  border-radius: 50%;
+  border-color: #23B0DB #23B0DB #0000 #0000;
+  mix-blend-mode: darken;
+  animation: s4 1s infinite linear;
+}
+.spinner::after {
+  border-color: #0000 #0000 blue blue;
+  animation-direction: reverse;
+}
 
+@keyframes s4{ 
+  100%{transform: rotate(1turn)}
+}
+@keyframes s1 {to{transform: rotate(.5turn)}}
+/*Espera FIN*/
 /*Bordes INICIO*/
 .border-curvo{
 	border-radius: 1rem!important;
@@ -138,7 +164,15 @@
   transition: all .5s;
   align-items: center;
 }
-
+.modal3{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all .5s;
+  align-items: center;
+}
 /*Modals FIN*/
 
 /*Mapa INICIO*/

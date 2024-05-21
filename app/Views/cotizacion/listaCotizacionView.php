@@ -3,7 +3,7 @@
 		<div class="container pt-5 pb-5">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h1 class="font-bebas text-dark">COTIZACIÓN</h1>
+					<h1 class="font-bebas text-dark">COTIZACINES</h1>
 				</div>
 			</div>
 			<div class="row pb-4 pt-4">
@@ -19,7 +19,7 @@
 						</tr>
 						<tr>
 							<th class="col text-center">Nombre cliente</th>
-							<th class="col text-center">Descripcion</th>
+							<th class="col text-center">Descripción</th>
 							<th class="col text-center">Servicio</th>
 							<th class="col text-center">Estado</th>
 							

@@ -18,7 +18,7 @@
 							<div class="g-recaptcha" data-sitekey="6LcgnQEoAAAAAJ--2zg0s_Xfwv90McAM7mhAE6rz"></div>
 						</div>
 						<div class="row-fluid text-center pt-2 pb-4">
-							<button type="submit" class="btn btn-bg btn-lg rounded-pill">ENVIAR</button>
+							<button type="submit" class="btn btn-bg btn-lg rounded-pill" onclick="MostrarModal()">ENVIAR</button>
 						</div>
 					</form>
 				</div>
@@ -26,20 +26,40 @@
 		</div>
 	</div>
 </div>
+<!--Modal En Espera-->
+<div class="modal3 container-fluid" name="modalEspera" id="modalEspera" hidden="true">
+		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
+			<div class="col-md-2">
+			    <div class="container bg-modal-message border-curvo">
+			    	<div class="modal-content border-0">
+			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
+
+			    			<h5 class="fs-4 pt-3 pb-1">EN PROCESO</h5>
+			    		</div>
+					    <div class="row text-center align-items-center">
+					    	<div class="col-md-4"></div>
+					    	<div class="col-md-4 pt-4 pb-4">
+					    		<div class="spinner"></div>
+					    		
+					    	</div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-5">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">ADVERTENCIA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">El correo electrónico proporcionado no se encuentra registrado. Por favor, asegúrese de ingresar el correo electrónico adecuado</h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 font-monserrat-regular pt-2">El correo electornico proporcionado no se encuentra registrado por favor asegurese de ingresar el correo electronico adecuado.</p>
-					    </div>
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
@@ -53,3 +73,9 @@ if ($messageReport=='1') {
 	</div>
 <?php
 }?>
+<script type="text/javascript">
+	function MostrarModal()
+    {
+    	document.getElementById("modalEspera").hidden = false;
+    }
+</script>

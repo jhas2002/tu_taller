@@ -11,8 +11,8 @@
               <option value="">Seleccione un tipo</option>
               <option value="1">Cantidad de Citas por Tipo</option>
               <option value="2">Cantidad de Cotizaciones por Tipo</option>
-              <option value="3">Calificacion por mes</option>
-              <option value="4">Citas Totatales</option>
+              <option value="3">Calificación por mes</option>
+              <option value="4">Citas Totales</option>
             </select>
             <div class="row" id="divFechas" hidden>
               <div class="col-md-6">
@@ -266,7 +266,7 @@ if ($dataReporte != '' && $tipoReporte != '4')
         type: 'bar',
         data: {
           labels: [<?php foreach ($dataReporte as $row) {
-          if ($titulo == 'Calificacion por mes') {echo '"'.$reporte->fechaLiteral($row->nombre). '",';}
+          if ($titulo == 'Calificación por mes') {echo '"'.$reporte->fechaLiteral($row->nombre). '",';}
           else
             {
               echo '"'.$row->nombre.'",';

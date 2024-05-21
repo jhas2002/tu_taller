@@ -2,7 +2,7 @@
 		<div class="about">
 			<img class="logofooter" src="<?php echo base_url('sources/images/logo.png') ?>" alt="Tu Taller logo">
 			<nav>
-				<h1>Elaborado por:</h1>
+				<h1 class="fs-5">Elaborado por:</h1>
 				<ul>
 					<li>
 						<p>

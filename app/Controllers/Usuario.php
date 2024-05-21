@@ -50,7 +50,7 @@ class Usuario extends BaseController
                 {
                     if ($row->estado == 0) {
                         $url = base_url('public/usuario/login');
-                        return redirect()->to($url);
+                        return redirect()->to($url)->with('messageReport','0');
                     }
                     else 
                     {

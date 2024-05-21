@@ -49,7 +49,7 @@
 				<div class="container">
 					<div class="row table-responsive">
 						<table class="table text-dark bg-white table-bordered border-dark " id="tablaDatos">
-							<thead class="font-monserrat-medium negrita">
+							<thead class="font-monserrat-medium ">
 								<tr>
 									<th class="col text-center">Pregunta</th>
 									<th class="col text-center">Respuestas</th>
@@ -135,20 +135,20 @@
   </div>
 </div>
 
+
+
 <?php
 if ($messageReport=='1') {
 	?>
 	<div class="modal2 container-fluid">
 		<div class="row m-0 p-0 pt-5 min-vh-100 justify-content-center align-items-center text-center pb-5">
-			<div class="col-md-6">
+			<div class="col-md-4">
 			    <div class="container bg-modal-message border-curvo">
 			    	<div class="modal-content border-0">
 			    		<div class="row text-center border-curvo-top2 bg-modal-titulo">
-			    			<h5 class="fs-1 pt-3 pb-1">PREGUNTA EXITOSA</h5>
+			    			<h5 class="fs-3 pt-3 pb-1">Se realizo su pregunta con éxito </h5>
 			    		</div>
-					    <div class="text-center">
-					    	<p class="fs-4 pt-2">Se realizo su pregunta con exito</p>
-					    </div>
+
 					    <div class="row text-center align-items-center">
 					    	<div class="col-md-4"></div>
 					    	<div class="col-md-4">
